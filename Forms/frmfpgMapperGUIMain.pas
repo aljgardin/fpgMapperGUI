@@ -18,7 +18,7 @@ uses
   fpg_Label,
   fpg_Tab,
   fpg_Dialogs,
-  fpg_constants, fpg_popupwindow,
+  fpg_constants,
   tiMediators,
   tiListMediators,
   tiModelMediator,
@@ -26,16 +26,18 @@ uses
   tiBaseMediator,
   tiLog,
   //tiRTTI,
-  umgdatamanager, MGSubjectByMediatorName, frmfpgmgclassDlg, typinfo, {fgl,}
-  GMapper, {Mapper,}
+  umgdatamanager, MGSubjectByMediatorName, frmfpgmgclassDlg,
+  typinfo, {fgl,}
+  GuiMapper, {Mapper,}
   agtiguihelper,
   agtireferenceclasses,
-  agtiReferenceClassesCustom, agtiMessageMemo,
+  agtiReferenceClassesCustom,
+  agtiMessageMemo,
+
   {%units 'Auto-generated GUI code'}
-  fpg_form,
-  fpg_panel,
-  fpg_splitter, fpg_listview
-  {%endunits};
+  fpg_form, fpg_panel, fpg_splitter, fpg_edit, fpg_editbtn, fpg_combobox
+  {%endunits}
+  ;
 
 const
   cMediatorNames: Array[1..4] of string =
@@ -177,12 +179,24 @@ type
     procedure miProjectIncludesSort(Sender: TObject);
     //  { StringGrid UnitClasses PopupMenu:}
     procedure miUnitClassesNew(Sender: TObject);
-
-    procedure miListItemClassNew(Sender: TObject);
-
     procedure miUnitClassesEdit(Sender: TObject);
     procedure miUnitClassesDelete(Sender: TObject);
     procedure miUnitClassesSort(Sender: TObject);
+
+
+    //Menu Helper Functions:
+
+    //Returns Sender as TComponent, If TFPGMenuIten Returns PopupComponent.
+    function miMenuItemToComponent(Sender: TObject): TComponent;
+    //Returns the MediatorView of Sender, USes miMenuItemToComponent.
+    function miMenuItemToView(Sender: TObject): TtiMediatorView;
+    //Returns DependentOn Selected Object, Use miMenuItemToComponent.
+    function miMenuItemToDependentOnSelected(Sender: TObject): TtiObject;
+
+    procedure miListItemClassNew(Sender: TObject);
+
+
+
     //  { StringGrid UnitClasses PopupMenu: End.}
     //  { --------------------------------- }
     //  { ---End Menu Item Event Procedures.--- }
@@ -190,44 +204,66 @@ type
   private
     {%region 'Auto Generated' -Fold}
     {@VFD_HEAD_BEGIN: fpgMapperGUIMainForm}
-    lblProjectFileName: TfpgLabel;
-    lblProjectFileNameLabel: TfpgLabel;
-    lblProjectName: TfpgLabel;
+    mbMainMenu: TfpgMenuBar;
+    PnlProjectName: TfpgPanel;
     lblProjectNameLabel: TfpgLabel;
-    lblProjectUnitName: TfpgLabel;
+    lblProjectName: TfpgLabel;
+    PnlProjectFileName: TfpgPanel;
+    lblProjectFileNameLabel: TfpgLabel;
+    lblProjectFileName: TfpgLabel;
+    PnlProject: TfpgPanel;
+    pcProject: TfpgPageControl;
+    tsProjectSettings: TfpgTabSheet;
+    tsProjectUnits: TfpgTabSheet;
+    sgProjectUnits: TfpgStringGrid;
+    tsProjectClasses: TfpgTabSheet;
+    sgProjectClasses: TfpgStringGrid;
+    tsProjectEnums: TfpgTabSheet;
+    sgProjectEnums: TfpgStringGrid;
+    tsProjectIncludes: TfpgTabSheet;
+    sgProjectIncludes: TfpgStringGrid;
+    Splitter1: TfpgSplitter;
+    pnlUnit: TfpgPanel;
+    pnlUnitName: TfpgPanel;
     lblUnitNameLabel: TfpgLabel;
-    mbMainMenu:  TfpgMenuBar;
-    pcProject:   TfpgPageControl;
-    pcUnit:      TfpgPageControl;
-    pmEdit:      TfpgPopupMenu;
+    lblProjectUnitName: TfpgLabel;
+    pcUnit: TfpgPageControl;
+    tsClasses: TfpgTabSheet;
+    sgUnitClasses: TfpgStringGrid;
+    tsUnitEnums: TfpgTabSheet;
+    sgUnitEnums: TfpgStringGrid;
+    tsUnitReferences: TfpgTabSheet;
+    sgUnitReferences: TfpgStringGrid;
+    pmFile: TfpgPopupMenu;
+    pmEdit: TfpgPopupMenu;
     pmEditSelect: TfpgPopupMenu;
-    pmFile:      TfpgPopupMenu;
-    pmHelp:      TfpgPopupMenu;
+    pmView: TfpgPopupMenu;
+    pmHelp: TfpgPopupMenu;
+    pmProjectUnits: TfpgPopupMenu;
     pmProjectEnums: TfpgPopupMenu;
     pmProjectIncludes: TfpgPopupMenu;
-    pmProjectUnits: TfpgPopupMenu;
     pmUnitClasses: TfpgPopupMenu;
-    pmView:      TfpgPopupMenu;
-    pnlProject:    TfpgPanel;
-    PnlProjectFileName: TfpgPanel;
-    PnlProjectName: TfpgPanel;
-    pnlUnit:     TfpgPanel;
-    pnlUnitName: TfpgPanel;
-    sgProjectClasses: TfpgStringGrid;
-    sgProjectEnums: TfpgStringGrid;
-    sgProjectIncludes: TfpgStringGrid;
-    sgProjectUnits: TfpgStringGrid;
-    sgUnitClasses: TfpgStringGrid;
-    sgUnitEnums: TfpgStringGrid;
-    sgUnitReferences: TfpgStringGrid;
-    Splitter1:   TfpgSplitter;
-    tsUnitClasses:   TfpgTabSheet;
-    tsUnitEnums: TfpgTabSheet;
-    tsUnitReferences: TfpgTabSheet;
-    tsProjectClasses: TfpgTabSheet;
-    tsProjectEnums: TfpgTabSheet;
-    tsProjectIncludes: TfpgTabSheet;
-    tsProjectUnits: TfpgTabSheet;
+    pnlProjectSettings: TfpgPanel;
+    LblProjectSettingsFilename: TfpgLabel;
+    fedtProjectFilename: TfpgFileNameEdit;
+    lblSettingsProjectName: TfpgLabel;
+    edtProjectName: TfpgEdit;
+    lblProjectOrigOutDirectory: TfpgLabel;
+    dedtProjectOrigOutDirectory: TfpgDirectoryEdit;
+    lblProjectOutputDirectory: TfpgLabel;
+    dedtProjectOutputDirectory: TfpgDirectoryEdit;
+    lblProjectBaseDirectory: TfpgLabel;
+    dedtBaseDirectory: TfpgDirectoryEdit;
+    lblProjectTabSpaces: TfpgLabel;
+    edtTabSpaces: TfpgEditInteger;
+    lblProjectBeginEndTabs: TfpgLabel;
+    edtProjectBeginEndTabs: TfpgEditInteger;
+    lblProjectVisibilityTabs: TfpgLabel;
+    edtProjectVisibilityTabs: TfpgEditInteger;
+    lblProjectMaxEditorCodeWidth: TfpgLabel;
+    edtMaxEditorCodeWidth: TfpgEditInteger;
+    lblProjectEnumType: TfpgLabel;
+    cbProjectEnumType: TfpgComboBox;
     {@VFD_HEAD_END: fpgMapperGUIMainForm}
     {%endregion}
 
@@ -250,6 +286,9 @@ type
     procedure ShowmListViews;
 
   public
+    testClassDef: TGMapClassDef;
+
+
     GUIHelper: TagtiGUIHelper;
 
     constructor Create(AOwner: TComponent); override;
@@ -271,7 +310,6 @@ implementation
 
 uses
   tiDialogs,
-  frmfpgMGDefaultDialog,
   frmfpgMGIncludesDlg,
   frmfpgMGEnumDlg,
   mgFpgDialogs;
@@ -284,7 +322,7 @@ begin
   begin
     if TfpgMenuItem(Sender).Owner is TfpgPopupMenu then
     begin
-      result := TfpgPopupMenu(TfpgMenuItem(Sender).Owner).PopupWidget;
+      result := TfpgPopupMenu(TfpgMenuItem(Sender).Owner).PopupComponent;
     end;
   end;
 end;
@@ -468,12 +506,23 @@ const
 var
   uName: string;
   zData: TGMapUnitDef;
+
+  aView: TtiMediatorView;
+  aDataType: TClass;
   { TODO : Use TtiObject instead.
 Create Object from Object Factory. }
 begin
   uName := '';
-  if fpg_Dialogs.fpgInputQuery('New Unit.', 'Enter New Unit Name:', uName) then
+  if fpg_Dialogs.fpgInputQuery('New Unit.', 'Enter New Unit:', uName) then
   begin
+
+    //Check for duplicate:
+    if mgData.Units.NameExists(uName) then
+    begin
+      ShowMessage('Unit [' + uName + '] already exists!', 'Unit already Exists!');
+      exit;
+    end;
+
     zData      := TGMapUnitDef.Create;
     zData.Name := uName;
     zData.NotifyObservers();
@@ -486,22 +535,60 @@ procedure TfpgMapperGUIMainForm.miProjectUnitsRename(Sender: TObject);
 const
   cProcHead = 'procedure TfpgMapperGUIMainForm.miProjectUnitsRename(Sender:TObject)';
 var
-  uName: string;
+  uName, zName: string;
   zData: TGMapUnitDef;
   iData: TtiObject;
+  aPopup: TfpgWidget;
+  liType: TClass;
+  amv: TtiMediatorView;
+  aMediatorName: String;
 begin
- if Not(GUIHelper.GetViewSelectedObject(Sender, iData)) then
- begin
-   ShowMessage(cProcHead + ' No item Selected.');
-   exit;
- end;
 
-  uName := iData.PropValue['Name'];
+  //TO Automate, just need a reference to PropertyName of itemclass to use as
+  //  field to use.
+  //...  ie 'Name'
 
-  if fpg_Dialogs.fpgInputQuery('Rename Unit.', 'Enter New Unit Name:', uName) then
+  //Need to send PopuComponent of Menu wich should be the String grid
+  //  to GetviewselectedObject.
+
+  if Not(Sender.InheritsFrom(TfpgMenuItem)) then
+     Exit;
+
+  aPopup := TfpgPopupMenu( TfpgMenuItem(Sender).Owner ).PopupComponent;
+
+  // is an item selected?
+  if Not(GUIHelper.GetViewSelectedObject(aPopup, iData)) then
   begin
-    iData.PropValue['Name'] := uName;
-    //mgData.Units.NotifyObservers();
+    ShowMessage(cProcHead + ' No item Selected.');
+    exit;
+  end;
+
+  if iData = nil then exit;
+
+  //we have the item type, get the ListType.
+  liType := GUIHelper.ListToItemList.FindListClassTypeByItemClassType(iData.ClassType);
+
+  if liType = nil then exit;
+
+  //Find the MediatorView:
+  amv := GUIHelper.mList.FindMediatorView(aPopup);
+  if amv = nil then exit;
+
+  zName := iData.PropValue['Name'];
+  uName := zName;
+
+  if fpg_Dialogs.fpgInputQuery('Rename Unit.', 'Enter New Unit Name:', zName) then
+  begin
+    if zName = uName then exit;
+
+    // Duplicate?
+    if GUIHelper.olPropExists(aMV.Subject, 'Name', zName) then
+    begin
+      ShowMessage('Unit [' + zName + '] already exist!', 'Unit already Exists!');
+      exit;
+    end;
+
+    iData.PropValue['Name'] := zName;
     iData.NotifyObservers();
   end;
 end;
@@ -570,9 +657,9 @@ var
 begin
   ShowMessage(cProcHead + ' NOT COMPLETED!');
 
-  pe := TGMapEnum.Create;
+  pe := TGMapEnum.CreateNew;
 
-  if TfpgMGEnumDlg.Edit(pe) = Integer(mrOK) then
+  if TfpgMGEnumDlg.Edit(pe) = mrOK then
   begin
     mgData.ProjectEnums.Add(pe);
     mgData.ProjectEnums.NotifyObservers();
@@ -720,78 +807,164 @@ var
   soUnits: TtiObject;
   lClasses: TtiObject;
   aViewComponent: TComponent;
-  { TODO : Use TtiObject instead.
-Create Object from Object Factory. }
+
+  depOnSelected: TTiObject;
+  mv: TtiMediatorView;
+  newClassName: String;
+  nObject, niObject: TtiObject;
+  idx: Integer;
+  oc: TtiClass;
 begin
   log(cProcHead);
   log('::Sender.ClassName = ' + Sender.ClassName);
-  log('::Sender as TComponent.Name = ' + TComponent(Sender).Name);
-  if Not(Sender is TComponent) then
-  begin
-    log('--Sender: TObject; Sender Not TComponent');
-    exit;
-  end;
 
-  // 1) Check if Unit Selected.
-  // 2) Query new class name.
+  // 1) Check if Unit Selected. DependentOn Selected.
+  // 2) Query new class name.  What Kind of action, New Name Dialog or New Object Dialog.
   // 3) create new class.
-  // 3) Add new class to unit.
+  // 4) Add new class to unit.
 
-  // 1)  Would use DependentOn here:
-  if Not(GUIHelper.ViewToMediatorNameList.FindByMediatorName('Project.Units', vtmn)) then
+  depOnSelected := miMenuItemToDependentOnSelected(Sender);
+  if depOnSelected = nil then exit;
+  ShowMessage('DependentOn Class: ' + depOnSelected.AsDebugString());
+  //TGMapUnitDef.UnitClasses
+
+  mv := miMenuItemToView(Sender);
+  if mv = nil then
+      exit;
+
+  newClassName := mv.Subject.ClassName;
+
+  ShowMEssage(newClassName);
+
+  if Not(GUIHelper.tiObjectFactory.IsRegistered(newClassName)) then
   begin
-    log('--GUIHelper.ViewToMediatorList.FindByMediatorName(''Project.Units'', vtmn); No Item Found.');
-    Exit;
-  end;
-  //vtmn hold Units View to mediator name info.
-  { TODO : May have been more than one found, how to handle. }
-
-  //is a unit selected,
-  //  is DependentOn selected?
-  soUnits := GUIHelper.mList.SelectedObject[vtmn.View];
-  if soUnits = nil then
-  begin
-    log('--No Unit Selected.');
-    Exit;
-  end;
-
-  //Sender is MenuItem, get the popupWidget of owner PopupWindow:
-
-  aViewComponent := TComponent(TfpgPopupWindow(TfpgMenuItem(Sender).Owner).PopupWidget);
-
-  if aViewComponent = nil then
-  begin
-    log('::AViewComponent: TComponent = nil');
-    Exit;
+    GUIHelper.tiObjectFactory.RegisterClass(newClassName, TtiClass(mv.Subject.ClassType));
   end;
 
-  mvClasses := GUIHelper.mList.FindMediatorView(aViewComponent);
-  if mvClasses = nil then
-  begin
-    log('::GUIHelper.mList.FindMediatorView(aViewComponent: TComponent, Name = ''' + aViewComponent.Name + '''); returned nil.');
+  nObject := GUIHelper.tiObjectFactory.CreateNewInstance(newClassName);
+
+  oc := GUIHelper.tiObjectFactory.ClassByName(mv.Subject.ClassName);
+
+  ShowMessage(oc.ClassName);
+
+  //AddnewObject to ListClass:
+  idx := (depOnSelected as TGMapUnitDef).UnitClasses.Add(nObject);
+  if idx = -1 then
     exit;
-  end;
+  niObject := (depOnSelected as TGMapUnitDef).UnitClasses.items[idx];
 
-  lClasses := mvClasses.Subject;
-  if lClasses = nil then
-  begin
-    log('::mvClasses: TtiMediatorView.Subject = nil');
-    Exit;
-  end;
+  ShowMessage(nObject.AsDebugString());
+  ShowMessage(niObject.AsDebugString());
 
-  if Not(lClasses is TtiObjectList) then
-  begin
-    log('::lClasses: TtiObject is not TtiObjectList.');
-  end;
+  //GUIHelper.tiObjectFactory.CreateInstance();
+end;
 
-  uName := '';
-  if fpg_Dialogs.fpgInputQuery('New Class.', 'Enter New Class Name:', uName) then
+function TfpgMapperGUIMainForm.miMenuItemToComponent(Sender: TObject): TComponent;
+var
+  pm: TfpgPopupMenu;
+  pc: TComponent;
+begin
+  //Returns the Component that sent the CLick.
+  result := nil;
+
+  if Not(Sender is TComponent) then
+    exit;
+
+  pc := TComponent(Sender);
+
+  // returns the View of the Sender: TObject if it is a TfpgMenuItem.
+  if Sender is TfpgMenuItem then
   begin
-    zData      := TGMapClassDef.Create;
-    zData.BaseClassName := uName;
-    (lClasses as TtiObjectList).Add(zData);
-    soUnits.NotifyObservers();
+    if (Sender as TfpgMenuItem).Owner is TfpgPopupMenu then
+    begin
+      pm := (Sender as TfpgMenuItem).Owner as TfpgPopupMenu;
+      pc := pm.PopupComponent;
+    end;
   end;
+  result := pc;
+end;
+
+function TfpgMapperGUIMainForm.miMenuItemToView(Sender: TObject): TtiMediatorView;
+var
+  pc: TComponent;
+begin
+  result := nil;
+  pc := miMenuItemToComponent(Sender);
+
+  if pc <> nil then
+  begin
+    result := GUIHelper.GetView(pc);
+  end;
+end;
+
+function TfpgMapperGUIMainForm.miMenuItemToDependentOnSelected(Sender: TObject
+  ): TtiObject;
+var
+  pc: TComponent;
+//  mv: TtiMediatorView;
+  aItem: TagtiViewToMediatorName;
+  depOnMediatorName: String;
+  SelMediatorName: String;
+  idx: Integer;
+  mm: TtiModelMediator;
+  depOnView: TComponent;
+  depOnSelectedObject: TtiObject;
+  temp: String;
+  mmap: TagtiMediatorMap;
+  depOnPropertyName: String;
+begin
+  result := nil;
+
+  if Not(Sender is TComponent) then
+    exit;
+
+  pc := miMenuItemToComponent(Sender);
+
+  if pc = nil then exit;
+
+  temp := pc.ClassName;
+
+  if Not(GUIHelper.ViewToMediatorNameList.FindByView(pc, aItem)) then
+    exit;
+
+  //{$ifdef debug}ShowMessage(aItem.AsDebugString());{$endif}
+
+  selMediatorName := aItem.MediatorName;
+
+  //Get Dependent On Mediator Name.
+
+  idx := GUIHelper.FindPropertyMediatorName(selMediatorName);
+
+  //{$ifdef debug}ShowMessage('idx = ' + IntToStr(idx));{$endif}
+
+  if idx = -1 then
+    exit;
+
+  mmap :=GUIHelper.MediatorMapList.Items[idx];
+  depOnMediatorName := mmap.DependentOnMediatorName;
+  depOnPropertyName := mmap.DependentOnPropertyName;
+
+  //{$ifdef debug}showmessage('DepOnMediatorName = ' + depOnMediatorName); {$endif}
+
+  mm := GUIHelper.mList.ModelMediator(depOnMediatorName);
+
+  if mm = nil then
+    exit;
+
+  //{$ifdef debug}ShowMessage(mm.ClassName);{$endif}
+
+  idx := GUIHelper.ViewToMediatorNameList.FindByMediatorName(depOnMediatorName);
+
+  if idx = -1 then
+    exit;
+
+  depOnView := GUIHelper.ViewToMediatorNameList.Items[idx].View;
+
+  depOnSelectedObject := nil;
+
+  depOnSelectedObject := mm.SelectedObject[depOnView];
+  depOnSelectedObject := GUIHelper.mList.SelectedObject[depOnView];
+  result := depOnSelectedObject;
 end;
 
 procedure TfpgMapperGUIMainForm.miListItemClassNew(Sender: TObject);
@@ -889,16 +1062,16 @@ begin
 
   // Project.Units:
   cStr := GUIHelper.PGM.GetCompositeStrCol(TGMapUnitDefList.ClassName, 'Name', 150);
-  GUIHelper.SetupListMediator(mgData.Units, TGMapUnitDef, sgProjectUnits, cstr, 'Project.Units', 'Project.Units.@Selected', 'Project', 'TMGMapProject', 'Units', false);
+  GUIHelper.SetupListMediator(mgData.Units, TGMapUnitDef, sgProjectUnits, cstr, 'Project.Units', 'Project.Units.Selected', 'Project', 'TMGMapProject', 'Units', false);
 
   // Project.ProjectClasses:
-  GUIHelper.SetupListMediator(mgData.ProjectClasses, TGMapClassDef, sgProjectClasses, '@', 'Project.ProjectClasses', 'Project.ProjectClasses.@Selected', 'Project', 'TGMapProject', 'ProjectClasses', false);
+  GUIHelper.SetupListMediator(mgData.ProjectClasses, TGMapClassDef, sgProjectClasses, '@', 'Project.ProjectClasses', 'Project.ProjectClasses.Selected', 'Project', 'TGMapProject', 'ProjectClasses', false);
 
   // Project.ProjectEnums
-  GUIHelper.SetupListMediator(mgData.ProjectEnums, TGMapEnum, sgProjectEnums, '@', 'Project.ProjectEnums', 'Project.ProjectEnums.@Selected', 'Project', 'TGMapProject', 'ProjectEnums', false);
+  GUIHelper.SetupListMediator(mgData.ProjectEnums, TGMapEnum, sgProjectEnums, '@', 'Project.ProjectEnums', 'Project.ProjectEnums.Selected', 'Project', 'TGMapProject', 'ProjectEnums', false);
 
   // Project.IncludeFiles:
-  GUIHelper.SetupListMediator(mgData.IncludeFiles, TGMapProjectIncludeFileList, sgProjectIncludes, '@', 'Project.IncludeFiles', 'Project.IncludeFiles.@Selected', 'Project', 'TGMapProject', 'IncludeFiles',true);
+  GUIHelper.SetupListMediator(mgData.IncludeFiles, TGMapProjectIncludeFileList, sgProjectIncludes, '@', 'Project.IncludeFiles', 'Project.IncludeFiles.Selected', 'Project', 'TGMapProject', 'IncludeFiles',true);
 
     {Project.Units.Selected}
     //TMapUnitDef = class(TBaseMapObject)
@@ -931,16 +1104,16 @@ begin
     // Project.Units.Selected.UnitReferences
     //
     // Project.Units.Selected:
-    GUIHelper.SetupPropertyMediatorClassOf(TGMapUnitDef, 'Name', lblProjectUnitName, 'Project.Units.@Selected', 'Project.Units', 'Items', 'TGMapUnitDefList', false);
+    GUIHelper.SetupPropertyMediatorClassOf(TGMapUnitDef, 'Name', lblProjectUnitName, 'Project.Units.Selected', 'Project.Units', 'TGMapUnitDefList', 'Items', false);
 
     // Project.Units.Selected.UnitClasses:
-    GUIHelper.SetupListMediatorClassOf(TGMapClassDefList, TGMapClassDef, sgUnitClasses, '@', 'Project.Units.@Selected.UnitClasses', 'Project.Units.@Selected.UnitClasses.@Selected', 'Project.Units.@Selected', 'TGMapUnitDef', 'Unitclasses', true);
+    GUIHelper.SetupListMediatorClassOf(TGMapClassDefList, TGMapClassDef, sgUnitClasses, '@', 'Project.Units.Selected.UnitClasses', 'Project.Units.Selected.UnitClasses.Selected', 'Project.Units', 'TGMapUnitDef', 'Unitclasses', true);
 
     // Project.Units.Selected.UnitEnums:
-    GUIHelper.SetupListMediatorClassOf(TGMapEnumList, TGMapEnum, sgUnitEnums, '@', 'Project.Units.@Selected.UnitEnums', 'Project.Units.@Selected.UnitEnums.@Selected', 'Project.Units.@Selected', 'TGMapUnitDef', 'ProjectEnums', true);
+    GUIHelper.SetupListMediatorClassOf(TGMapEnumList, TGMapEnum, sgUnitEnums, '@', 'Project.Units.Selected.UnitEnums', 'Project.Units.Selected.UnitEnums.Selected', 'Project.Units.Selected', 'TGMapUnitDef', 'ProjectEnums', true);
 
     // Project.Units.Selected.UnitReferences:
-    GUIHelper.SetupListMediatorClassOf(TGMapUnitReferenceList, TGMapUnitReference, sgUnitReferences, '@', 'Project.Units.@Selected.UnitReferences', 'Project.Units.@Selected.UnitReferecnes.@Selected', 'Project.Units.@Selected', 'TGMapUnitDef', 'UnitReferences', true);
+    GUIHelper.SetupListMediatorClassOf(TGMapUnitReferenceList, TGMapUnitReference, sgUnitReferences, '@', 'Project.Units.Selected.UnitReferences', 'Project.Units.Selected.UnitReferecnes.Selected', 'Project.Units.Selected', 'TGMapUnitDef', 'UnitReferences', true);
 
     {Project.ProjectClasses.Selected}
 
@@ -1124,7 +1297,7 @@ procedure TfpgMapperGUIMainForm.mgOnClose(Sender: TObject;
 const
   cProcHead = 'procedure TfpgMapperGUIMainForm.mgOnClose(Sender:TObject;CloseAction:TCloseAction)';
 begin
-  //ShowMessage(cProcHead + ' NOT COMPLETED!');
+  ShowMessage(cProcHead + ' NOT COMPLETED!');
 end;
 
 procedure TfpgMapperGUIMainForm.sgOnRowChange(Sender: TObject; ARow: Integer);
@@ -1146,6 +1319,10 @@ var
 begin
   //  ONCLick and OnRowChange:
 
+  // Check for OnClosing, csDetroting.
+
+
+
   // generic onRowChange for a ListClass Mediator.
   //
   //  When a List Control is clicked
@@ -1159,6 +1336,9 @@ begin
 
   if csDestroying in TComponent(Sender).ComponentState then
     exit;
+
+  if csDestroying in ComponentState then
+     exit;
 
   // Get the Mediator View.
   mv := GUIHelper.mlist.FindMediatorView(TComponent(Sender));
@@ -1452,17 +1632,7 @@ begin
 end;
 
 procedure TfpgMapperGUIMainForm.miHelpDefaultDialog(Sender: TObject);
-var
-  f: TfpgMGDefaultDialog;
 begin
-  try
-    f := TfpgMGDefaultDialog.Create(self);
-    f.Data := Data;
-    f.ShowModal;
-  finally
-    f.Free;
-  end;
-//  F.Edit(Data);
 end;
 
 procedure TfpgMapperGUIMainForm.miHelpIncludeDialog(Sender: TObject);
@@ -1553,12 +1723,10 @@ procedure TfpgMapperGUIMainForm.miHelpShowClassEditDlg(Sender: TObject);
 var
   f: TfpgMGClassDlg;
 begin
-  try
-    f := TfpgMGClassDlg.Create(self);
-    f.ShowModal;
-  finally
-    f.Free;
-  end;
+  if not(Assigned(testClassDef))then
+    testClassDef := TGMapClassDef.Create;
+
+  TfpgMGClassDlg.Edit(testclassdef);
 end;
 
 procedure TfpgMapperGUIMainForm.ShowmListNames;
@@ -1617,20 +1785,22 @@ procedure TfpgMapperGUIMainForm.AfterCreate;
 begin
   {%region 'Auto-generated GUI code' }
   {@VFD_BODY_BEGIN: fpgMapperGUIMainForm}
-  //MainForm:
   Name := 'fpgMapperGUIMainForm';
-  SetPosition(10, 10, 900, 600);
+  SetPosition(453, 131, 900, 600);
   WindowTitle := 'fpgMapperGUIMainForm';
-  Hint     := '';
+  Hint := '';
   IconName := '';
   BackGroundColor := $80000001;
+  //MainForm:
+  //Left Panel:
+  //Right Panel:
 
   mbMainMenu := TfpgMenuBar.Create(self);
   with mbMainMenu do
   begin
     Name := 'mbMainMenu';
     SetPosition(0, 0, 501, 25);
-    Anchors := [anLeft, anRight, anTop];
+    Anchors := [anLeft,anRight,anTop];
     Align   := alTop;
   end;
 
@@ -1638,11 +1808,11 @@ begin
   with PnlProjectName do
   begin
     Name := 'PnlProjectName';
-    SetPosition(0, 0, 501, 25);
-    Align    := alTop;
+    SetPosition(0, 0, 900, 25);
+    Align := alTop;
     FontDesc := '#Label1';
-    Hint     := '';
-    Text     := '';
+    Hint := '';
+    Text := '';
   end;
 
   lblProjectNameLabel := TfpgLabel.Create(PnlProjectName);
@@ -1650,10 +1820,10 @@ begin
   begin
     Name := 'lblProjectNameLabel';
     SetPosition(2, 2, 150, 21);
-    Align    := alLeft;
+    Align := alLeft;
     FontDesc := '#Label1';
-    Hint     := '';
-    Text     := 'Project Name: ';
+    Hint := '';
+    Text := 'Project Name: ';
     AutoSize := True;
   end;
 
@@ -1661,11 +1831,11 @@ begin
   with lblProjectName do
   begin
     Name := 'lblProjectName';
-    SetPosition(152, 2, 501, 21);
-    Align    := alLeft;
+    SetPosition(652, -46, 501, 21);
+    Align := alLeft;
     FontDesc := '#Label1';
-    Hint     := '';
-    Text     := 'Not Assigned.';
+    Hint := '';
+    Text := 'Not Assigned.';
     Autosize := True;
   end;
 
@@ -1673,11 +1843,11 @@ begin
   with PnlProjectFileName do
   begin
     Name := 'PnlProjectFileName';
-    SetPosition(0, 25, 501, 30);
-    Align    := alTop;
+    SetPosition(0, 25, 900, 30);
+    Align := alTop;
     FontDesc := '#Label1';
-    Hint     := '';
-    Text     := '';
+    Hint := '';
+    Text := '';
   end;
 
   lblProjectFileNameLabel := TfpgLabel.Create(PnlProjectFileName);
@@ -1685,10 +1855,10 @@ begin
   begin
     Name := 'lblProjectFileNameLabel';
     SetPosition(2, 2, 150, 26);
-    Align    := alLeft;
+    Align := alLeft;
     FontDesc := '#Label1';
-    Hint     := '';
-    Text     := 'Project FileName: ';
+    Hint := '';
+    Text := 'Project FileName: ';
     Autosize := True;
   end;
 
@@ -1697,58 +1867,68 @@ begin
   begin
     Name := 'lblProjectFileName';
     SetPosition(152, 2, 501, 26);
-    Align    := alLeft;
+    Align := alLeft;
     FontDesc := '#Label1';
-    Hint     := '';
-    Text     := 'Not Assigned.';
+    Hint := '';
+    Text := 'Not Assigned.';
     AutoSize := True;
   end;
 
-  //Left Panel:
-  pnlProject := TfpgPanel.Create(self);
-  with pnlProject do
+  PnlProject := TfpgPanel.Create(self);
+  with PnlProject do
   begin
     Name := 'PnlProject';
-    SetPosition(0, 55, 300, 419);
-    Align    := alLeft;
+    SetPosition(0, 55, 300, 545);
+    Align := alLeft;
     FontDesc := '#Label1';
-    Hint     := '';
-    Text     := '';
+    Hint := '';
+    Text := '';
   end;
 
-  pcProject := TfpgPageControl.Create(pnlProject);
+  pcProject := TfpgPageControl.Create(PnlProject);
   with pcProject do
   begin
     Name := 'pcProject';
-    SetPosition(2, 32, 385, 385);
-    Align    := alClient;
-    Hint     := '';
+    SetPosition(2, 2, 296, 541);
+    ActivePageIndex := 1;
+    Align := alClient;
+    Hint := '';
     TabOrder := 1;
+  end;
+
+  tsProjectSettings := TfpgTabSheet.Create(pcProject);
+  with tsProjectSettings do
+  begin
+    Name := 'tsProjectSettings';
+    SetPosition(3, 24, 290, 514);
+    Anchors := [anLeft,anRight,anTop,anBottom];
+    Text := 'Project Settings';
+    Align   := alClient;
   end;
 
   tsProjectUnits := TfpgTabSheet.Create(pcProject);
   with tsProjectUnits do
   begin
     Name := 'tsProjectUnits';
-    SetPosition(0, 0, 100, 100);
+    SetPosition(3, 24, 290, 514);
+    Anchors := [anLeft,anRight,anTop,anBottom];
+    Text := 'Project Units';
     Align   := alClient;
-    Anchors := [anLeft, anRight, anTop, anBottom];
-    Text    := 'Project Units';
   end;
 
   sgProjectUnits := TfpgStringGrid.Create(tsProjectUnits);
   with sgProjectUnits do
   begin
     Name := 'sgProjectUnits';
-    SetPosition(2, 16, 100, 401);
-    Align     := alClient;
+    SetPosition(0, 0, 290, 514);
+    Align := alClient;
     BackgroundColor := TfpgColor($80000002);
-    FontDesc  := '#Grid';
+    FontDesc := '#Grid';
     HeaderFontDesc := '#GridHeader';
-    Hint      := '';
-    RowCount  := 0;
+    Hint := '';
+    RowCount := 0;
     RowSelect := False;
-    TabOrder  := 1;
+    TabOrder := 1;
     OnDoubleClick := @sgOnDoubleClick;
     OnRowChange := @GuiHelper.RowChange;// @sgOnRowChange;
   end;
@@ -1757,25 +1937,25 @@ begin
   with tsProjectClasses do
   begin
     Name := 'tsProjectClasses';
-    SetPosition(0, 0, 100, 100);
+    SetPosition(3, 24, 290, 514);
+    Anchors := [anLeft,anRight,anTop,anBottom];
+    Text := 'Project Classes';
     Align := alClient;
-    Anchors := [anLeft, anRight, anTop, anBottom];
-    Text    := 'Project Classes';
   end;
 
   sgProjectClasses := TfpgStringGrid.Create(tsProjectClasses);
   with sgProjectClasses do
   begin
     Name := 'sgProjectClasses';
-    SetPosition(0, 0, 300, 358);
-    Align     := alClient;
+    SetPosition(0, 0, 290, 514);
+    Align := alClient;
     BackgroundColor := TfpgColor($80000002);
-    FontDesc  := '#Grid';
+    FontDesc := '#Grid';
     HeaderFontDesc := '#GridHeader';
-    Hint      := '';
-    RowCount  := 0;
+    Hint := '';
+    RowCount := 0;
     RowSelect := False;
-    TabOrder  := 1;
+    TabOrder := 1;
     OnDoubleClick := @sgOnDoubleClick;
     OnRowChange := @GUIHelper.RowChange;// @sgOnRowChange;
   end;
@@ -1784,25 +1964,25 @@ begin
   with tsProjectEnums do
   begin
     Name := 'tsProjectEnums';
-    SetPosition(0, 0, 100, 100);
+    SetPosition(3, 24, 290, 514);
+    Anchors := [anLeft,anRight,anTop,anBottom];
+    Text := 'Project Enums';
     Align   := alClient;
-    Anchors := [anLeft, anRight, anTop, anBottom];
-    Text    := 'Project Enums';
   end;
 
   sgProjectEnums := TfpgStringGrid.Create(tsProjectEnums);
   with sgProjectEnums do
   begin
     Name := 'sgProjectEnums';
-    SetPosition(0, 0, 300, 358);
-    Align     := alClient;
+    SetPosition(0, 0, 290, 514);
+    Align := alClient;
     BackgroundColor := TfpgColor($80000002);
-    FontDesc  := '#Grid';
+    FontDesc := '#Grid';
     HeaderFontDesc := '#GridHeader';
-    Hint      := '';
-    RowCount  := 0;
+    Hint := '';
+    RowCount := 0;
     RowSelect := False;
-    TabOrder  := 1;
+    TabOrder := 1;
     OnDoubleClick := @sgOnDoubleClick;
     OnRowChange := @GUIHelper.RowChange;//@sgOnRowChange;
   end;
@@ -1812,24 +1992,24 @@ begin
   begin
     Name := 'tsProjectIncludes';
     SetPosition(0, 0, 100, 100);
+    Anchors := [anLeft,anRight,anTop,anBottom];
+    Text := 'Project Includes';
     Align   := alClient;
-    Anchors := [anLeft, anRight, anTop, anBottom];
-    Text    := 'Project Includes';
   end;
 
   sgProjectIncludes := TfpgStringGrid.Create(tsProjectIncludes);
   with sgProjectIncludes do
   begin
     Name := 'sgProjectIncludes';
-    SetPosition(0, 0, 300, 358);
-    Align     := alClient;
+    SetPosition(0, 0, 100, 100);
+    Align := alClient;
     BackgroundColor := TfpgColor($80000002);
-    FontDesc  := '#Grid';
+    FontDesc := '#Grid';
     HeaderFontDesc := '#GridHeader';
-    Hint      := '';
-    RowCount  := 0;
+    Hint := '';
+    RowCount := 0;
     RowSelect := False;
-    TabOrder  := 1;
+    TabOrder := 1;
     OnDoubleClick := @sgOnDoubleClick;
     OnRowChange := @GUIHelper.RowChange;//@sgOnRowChange;
   end;
@@ -1838,31 +2018,30 @@ begin
   with Splitter1 do
   begin
     Name := 'Splitter1';
-    SetPosition(104, 55, 8, 419);
+    SetPosition(300, 55, 8, 545);
     Align := alLeft;
   end;
 
-  //Right Panel:
   pnlUnit := TfpgPanel.Create(self);
   with pnlUnit do
   begin
     Name := 'pnlUnit';
-    SetPosition(112, 55, 500, 419);
-    Align    := alClient;
+    SetPosition(308, 55, 592, 545);
+    Align := alClient;
     FontDesc := '#Label1';
-    Hint     := '';
-    Text     := '';
+    Hint := '';
+    Text := '';
   end;
 
   pnlUnitName := TfpgPanel.Create(pnlUnit);
   with pnlUnitName do
   begin
     Name := 'pnlUnitName';
-    SetPosition(2, 2, 385, 30);
-    Align    := alTop;
+    SetPosition(2, 2, 588, 30);
+    Align := alTop;
     FontDesc := '#Label1';
-    Hint     := '';
-    Text     := '';
+    Hint := '';
+    Text := '';
   end;
 
   lblUnitNameLabel := TfpgLabel.Create(pnlUnitName);
@@ -1870,10 +2049,10 @@ begin
   begin
     Name := 'lblUnitNameLabel';
     SetPosition(2, 2, 150, 26);
-    Align    := alLeft;
+    Align := alLeft;
     FontDesc := '#Label1';
-    Hint     := '';
-    Text     := 'Unit Name:';
+    Hint := '';
+    Text := 'Unit Name:';
     Autosize := True;
   end;
 
@@ -1882,10 +2061,10 @@ begin
   begin
     Name := 'lblProjectUnitName';
     SetPosition(152, 2, 150, 26);
-    Align    := alLeft;
+    Align := alLeft;
     FontDesc := '#Label1';
-    Hint     := '';
-    Text     := 'Not Assigned.';
+    Hint := '';
+    Text := 'Not Assigned.';
     Autosize := True;
   end;
 
@@ -1893,34 +2072,34 @@ begin
   with pcUnit do
   begin
     Name := 'pcUnit';
-    SetPosition(2, 32, 385, 385);
-    Align    := alClient;
-    Hint     := '';
+    SetPosition(2, 32, 588, 511);
+    Align := alClient;
+    Hint := '';
     TabOrder := 1;
   end;
 
-  tsUnitClasses := TfpgTabSheet.Create(pcUnit);
-  with tsUnitClasses do
+  tsClasses := TfpgTabSheet.Create(pcUnit);
+  with tsClasses do
   begin
     Name := 'tsClasses';
-    SetPosition(3, 24, 379, 358);
-    Anchors := [anLeft, anRight, anTop, anBottom];
-    Text    := 'Classes';
+    SetPosition(3, 24, 582, 484);
+    Anchors := [anLeft,anRight,anTop,anBottom];
+    Text := 'Classes';
   end;
 
-  sgUnitClasses := TfpgStringGrid.Create(tsUnitClasses);
+  sgUnitClasses := TfpgStringGrid.Create(self);
   with sgUnitClasses do
   begin
     Name := 'sgUnitClasses';
-    SetPosition(0, 0, 379, 358);
-    Align     := alClient;
+    SetPosition(308, 55, 592, 545);
+    Align := alClient;
     BackgroundColor := TfpgColor($80000002);
-    FontDesc  := '#Grid';
+    FontDesc := '#Grid';
     HeaderFontDesc := '#GridHeader';
-    Hint      := '';
-    RowCount  := 0;
+    Hint := '';
+    RowCount := 0;
     RowSelect := False;
-    TabOrder  := 1;
+    TabOrder := 1;
     OnDoubleClick := @sgOnDoubleClick;
     OnRowChange := @GUIHelper.RowChange;//@sgOnRowChange;
   end;
@@ -1929,24 +2108,24 @@ begin
   with tsUnitEnums do
   begin
     Name := 'tsUnitEnums';
-    SetPosition(3, 24, 379, 358);
-    Anchors := [anLeft, anRight, anTop, anBottom];
-    Text    := 'Enumerations';
+    SetPosition(3, 24, 582, 484);
+    Anchors := [anLeft,anRight,anTop,anBottom];
+    Text := 'Enumerations';
   end;
 
   sgUnitEnums := TfpgStringGrid.Create(tsUnitEnums);
   with sgUnitEnums do
   begin
     Name := 'sgUnitEnums';
-    SetPosition(0, 0, 379, 358);
-    Align     := alClient;
+    SetPosition(0, 0, 582, 484);
+    Align := alClient;
     BackgroundColor := TfpgColor($80000002);
-    FontDesc  := '#Grid';
+    FontDesc := '#Grid';
     HeaderFontDesc := '#GridHeader';
-    Hint      := '';
-    RowCount  := 0;
+    Hint := '';
+    RowCount := 0;
     RowSelect := False;
-    TabOrder  := 1;
+    TabOrder := 1;
     OnDoubleClick := @sgOnDoubleClick;
     OnRowChange := @GUIHelper.RowChange;//@sgOnRowChange;
   end;
@@ -1956,8 +2135,8 @@ begin
   begin
     Name := 'tsUnitReferences';
     SetPosition(3, 24, 379, 358);
-    Anchors := [anLeft, anRight, anTop, anBottom];
-    Text    := 'References';
+    Anchors := [anLeft,anRight,anTop,anBottom];
+    Text := 'References';
   end;
 
   sgUnitReferences := TfpgStringGrid.Create(tsUnitReferences);
@@ -1965,14 +2144,14 @@ begin
   begin
     Name := 'sgUnitReferences';
     SetPosition(0, 0, 379, 358);
-    Align     := alClient;
+    Align := alClient;
     BackgroundColor := TfpgColor($80000002);
-    FontDesc  := '#Grid';
+    FontDesc := '#Grid';
     HeaderFontDesc := '#GridHeader';
-    Hint      := '';
-    RowCount  := 0;
+    Hint := '';
+    RowCount := 0;
     RowSelect := False;
-    TabOrder  := 1;
+    TabOrder := 1;
     OnDoubleClick := @sgOnDoubleClick;
     OnRowChange := @GUIHelper.RowChange;//@sgOnRowChange;
   end;
@@ -2051,8 +2230,8 @@ begin
   with pmProjectUnits do
   begin
     Name := 'pmProjectUnits';
-    //Parent := sgProjectUnits;
     SetPosition(128, 156, 120, 32);
+    //Parent := sgProjectUnits;
     AddMenuItem('&New Unit', rsKeyCtrl + 'N', @miProjectUnitsNew);
     AddMenuItem('&Rename Unit', rsKeyCtrl + 'R', @miProjectUnitsRename);
     AddMenuItem('&Delete Unit', rsKeyCtrl + 'D', @miProjectUnitsDelete);
@@ -2090,6 +2269,258 @@ begin
     AddMenuItem('&Edit Class', rsKeyCtrl + 'E', @miUnitClassesEdit);
     AddMenuItem('&Delete Class', rsKeyCtrl + 'D', @miUnitClassesDelete);
     AddMenuItem('&Sort Classes', rsKeyCtrl + 'S', @miUnitClassesSort);
+  end;
+
+  pnlProjectSettings := TfpgPanel.Create(tsProjectSettings);
+  with pnlProjectSettings do
+  begin
+    Name := 'pnlProjectSettings';
+    SetPosition(0, 0, 290, 514);
+    Align := alClient;
+    FontDesc := '#Label1';
+    Hint := '';
+    Text := '';
+  end;
+
+  LblProjectSettingsFilename := TfpgLabel.Create(pnlProjectSettings);
+  with LblProjectSettingsFilename do
+  begin
+    Name := 'LblProjectSettingsFilename';
+    SetPosition(2, 2, 286, 16);
+    Align := alTop;
+    FontDesc := '#Label1';
+    Hint := '';
+    Text := 'Project FileName:';
+  end;
+
+  fedtProjectFilename := TfpgFileNameEdit.Create(pnlProjectSettings);
+  with fedtProjectFilename do
+  begin
+    Name := 'fedtProjectFilename';
+    SetPosition(2, 18, 286, 24);
+    Align := alTop;
+    ExtraHint := '';
+    FileName := '';
+    Filter := '';
+    InitialDir := '';
+    TabOrder := 3;
+  end;
+
+  lblSettingsProjectName := TfpgLabel.Create(pnlProjectSettings);
+  with lblSettingsProjectName do
+  begin
+    Name := 'lblSettingsProjectName';
+    SetPosition(2, 42, 286, 16);
+    Align := alTop;
+    FontDesc := '#Label1';
+    Hint := '';
+    Text := 'ProjectName:';
+  end;
+
+  edtProjectName := TfpgEdit.Create(pnlProjectSettings);
+  with edtProjectName do
+  begin
+    Name := 'edtProjectName';
+    SetPosition(2, 58, 286, 24);
+    Align := alTop;
+    ExtraHint := '';
+    FontDesc := '#Edit1';
+    Hint := '';
+    TabOrder := 4;
+    Text := '';
+  end;
+
+  lblProjectOrigOutDirectory := TfpgLabel.Create(pnlProjectSettings);
+  with lblProjectOrigOutDirectory do
+  begin
+    Name := 'lblProjectOrigOutDirectory';
+    SetPosition(2, 82, 286, 16);
+    Align := alTop;
+    FontDesc := '#Label1';
+    Hint := '';
+    Text := 'OrigOutDirectory:';
+  end;
+
+  dedtProjectOrigOutDirectory := TfpgDirectoryEdit.Create(pnlProjectSettings);
+  with dedtProjectOrigOutDirectory do
+  begin
+    Name := 'dedtProjectOrigOutDirectory';
+    SetPosition(2, 98, 286, 24);
+    Align := alTop;
+    Directory := '';
+    ExtraHint := '';
+    RootDirectory := '';
+    TabOrder := 6;
+  end;
+
+  lblProjectOutputDirectory := TfpgLabel.Create(pnlProjectSettings);
+  with lblProjectOutputDirectory do
+  begin
+    Name := 'lblProjectOutputDirectory';
+    SetPosition(2, 122, 286, 16);
+    Align := alTop;
+    FontDesc := '#Label1';
+    Hint := '';
+    Text := 'OutputDirectory:';
+  end;
+
+  dedtProjectOutputDirectory := TfpgDirectoryEdit.Create(pnlProjectSettings);
+  with dedtProjectOutputDirectory do
+  begin
+    Name := 'dedtProjectOutputDirectory';
+    SetPosition(2, 138, 286, 24);
+    Align := alTop;
+    Directory := '';
+    ExtraHint := '';
+    RootDirectory := '';
+    TabOrder := 8;
+  end;
+
+  lblProjectBaseDirectory := TfpgLabel.Create(pnlProjectSettings);
+  with lblProjectBaseDirectory do
+  begin
+    Name := 'lblProjectBaseDirectory';
+    SetPosition(2, 162, 286, 16);
+    Align := alTop;
+    FontDesc := '#Label1';
+    Hint := '';
+    Text := 'BaseDirectory:';
+  end;
+
+  dedtBaseDirectory := TfpgDirectoryEdit.Create(pnlProjectSettings);
+  with dedtBaseDirectory do
+  begin
+    Name := 'dedtBaseDirectory';
+    SetPosition(2, 178, 286, 24);
+    Align := alTop;
+    Directory := '';
+    ExtraHint := '';
+    RootDirectory := '';
+    TabOrder := 10;
+  end;
+
+  lblProjectTabSpaces := TfpgLabel.Create(pnlProjectSettings);
+  with lblProjectTabSpaces do
+  begin
+    Name := 'lblProjectTabSpaces';
+    SetPosition(2, 202, 286, 16);
+    Align := alTop;
+    FontDesc := '#Label1';
+    Hint := '';
+    Text := 'Tab Spaces';
+  end;
+
+  edtTabSpaces := TfpgEditInteger.Create(pnlProjectSettings);
+  with edtTabSpaces do
+  begin
+    Name := 'edtTabSpaces';
+    SetPosition(2, 218, 286, 24);
+    Align := alTop;
+    FontDesc := '#Edit1';
+    Hint := '';
+    MaxValue := 20;
+    MinValue := 0;
+    TabOrder := 12;
+    Value := 2;
+  end;
+
+  lblProjectBeginEndTabs := TfpgLabel.Create(pnlProjectSettings);
+  with lblProjectBeginEndTabs do
+  begin
+    Name := 'lblProjectBeginEndTabs';
+    SetPosition(2, 242, 286, 16);
+    Align := alTop;
+    FontDesc := '#Label1';
+    Hint := '';
+    Text := 'Begin End Tabs:';
+  end;
+
+  edtProjectBeginEndTabs := TfpgEditInteger.Create(pnlProjectSettings);
+  with edtProjectBeginEndTabs do
+  begin
+    Name := 'edtProjectBeginEndTabs';
+    SetPosition(2, 258, 286, 24);
+    Align := alTop;
+    FontDesc := '#Edit1';
+    Hint := '';
+    MaxValue := 20;
+    MinValue := 0;
+    TabOrder := 14;
+    Value := 2;
+  end;
+
+  lblProjectVisibilityTabs := TfpgLabel.Create(pnlProjectSettings);
+  with lblProjectVisibilityTabs do
+  begin
+    Name := 'lblProjectVisibilityTabs';
+    SetPosition(2, 282, 286, 16);
+    Align := alTop;
+    FontDesc := '#Label1';
+    Hint := '';
+    Text := 'Visibility  Tabs:';
+  end;
+
+  edtProjectVisibilityTabs := TfpgEditInteger.Create(pnlProjectSettings);
+  with edtProjectVisibilityTabs do
+  begin
+    Name := 'edtProjectVisibilityTabs';
+    SetPosition(2, 298, 286, 24);
+    Align := alTop;
+    FontDesc := '#Edit1';
+    Hint := '';
+    MaxValue := 20;
+    MinValue := 0;
+    TabOrder := 16;
+    Value := 2;
+  end;
+
+  lblProjectMaxEditorCodeWidth := TfpgLabel.Create(pnlProjectSettings);
+  with lblProjectMaxEditorCodeWidth do
+  begin
+    Name := 'lblProjectMaxEditorCodeWidth';
+    SetPosition(2, 322, 286, 16);
+    Align := alTop;
+    FontDesc := '#Label1';
+    Hint := '';
+    Text := 'Max Editor Code Wiidth:';
+  end;
+
+  edtMaxEditorCodeWidth := TfpgEditInteger.Create(pnlProjectSettings);
+  with edtMaxEditorCodeWidth do
+  begin
+    Name := 'edtMaxEditorCodeWidth';
+    SetPosition(2, 338, 286, 24);
+    Align := alTop;
+    FontDesc := '#Edit1';
+    Hint := '';
+    MaxValue := 1000;
+    MinValue := 0;
+    TabOrder := 18;
+    Value := 80;
+  end;
+
+  lblProjectEnumType := TfpgLabel.Create(pnlProjectSettings);
+  with lblProjectEnumType do
+  begin
+    Name := 'lblProjectEnumType';
+    SetPosition(2, 362, 286, 16);
+    Align := alTop;
+    FontDesc := '#Label1';
+    Hint := '';
+    Text := 'EnumType';
+  end;
+
+  cbProjectEnumType := TfpgComboBox.Create(pnlProjectSettings);
+  with cbProjectEnumType do
+  begin
+    Name := 'cbProjectEnumType';
+    SetPosition(2, 378, 286, 24);
+    Align := alTop;
+    ExtraHint := '';
+    FontDesc := '#List';
+    Hint := '';
+    FocusItem := -1;
+    TabOrder := 20;
   end;
 
   {@VFD_BODY_END: fpgMapperGUIMainForm}
