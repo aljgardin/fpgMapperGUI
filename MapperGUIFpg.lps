@@ -4,7 +4,7 @@
     <PathDelim Value="\"/>
     <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="69">
+    <Units Count="72">
       <Unit0>
         <Filename Value="MapperGUIFpg.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -412,14 +412,13 @@
       </Unit53>
       <Unit54>
         <Filename Value="..\Laz\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="16"/>
         <CursorPos X="3" Y="29"/>
         <UsageCount Value="125"/>
         <Bookmarks Count="1">
           <Item0 Y="76" ID="3"/>
         </Bookmarks>
-        <Loaded Value="True"/>
       </Unit54>
       <Unit55>
         <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\objpas\classes\classesh.inc"/>
@@ -509,9 +508,10 @@
       <Unit67>
         <Filename Value="..\Laz\Packages\TIOPF\agtiAppHelpers\fpg\agtiguihelperfuncsfpg.pas"/>
         <UnitName Value="agtiGUIHelperFuncsfpg"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="3" Y="11"/>
+        <EditorIndex Value="1"/>
+        <CursorPos X="5" Y="18"/>
         <UsageCount Value="106"/>
+        <Loaded Value="True"/>
       </Unit67>
       <Unit68>
         <Filename Value="..\Laz\Packages\TIOPF\agtiAppHelpers\agtipropertyguimanager.pas"/>
@@ -520,13 +520,30 @@
         <CursorPos Y="492"/>
         <UsageCount Value="59"/>
       </Unit68>
+      <Unit69>
+        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\GUI\tiTreeviewEditor.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="25"/>
+        <CursorPos X="14" Y="38"/>
+        <UsageCount Value="10"/>
+      </Unit69>
+      <Unit70>
+        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\GUI\fpGUI\tiGUIConstants.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="2" Y="3"/>
+        <UsageCount Value="10"/>
+      </Unit70>
+      <Unit71>
+        <Filename Value="..\Laz\Packages\TIOPF\agtiAppHelpers\agtiguihelperbase.pas"/>
+        <UnitName Value="agtiguihelperBase"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="10"/>
+        <CursorPos X="42" Y="11"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit71>
     </Units>
-    <JumpHistory Count="1">
-      <Position1>
-        <Filename Value="..\Laz\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="29" Column="3" TopLine="16"/>
-      </Position1>
-    </JumpHistory>
+    <JumpHistory HistoryIndex="-1"/>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes Count="0" ActiveMode="default"/>

@@ -11,7 +11,7 @@ uses
   {$ENDIF}
   SysUtils, Classes, fpg_base, fpg_main,
   tiObject, tiLog,
-  agtiguihelper, agfpgBaseDialogEditTiopf,
+  agtiguihelperBase, agfpgBaseDialogEditTiopf,
   GuiMapper,
   {%units 'Auto-generated GUI code'}
   fpg_form, fpg_label, fpg_edit, fpg_combobox, fpg_panel, fpg_tab,
