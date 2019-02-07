@@ -9,7 +9,7 @@ unit uMGDataManager;
 interface
 
 uses
-  Classes, SysUtils, Mapper, tiObject, tiOID, GMapper;
+  Classes, SysUtils, Mapper, tiObject, tiOID, GuiMapper;
 
 type
 
@@ -139,7 +139,7 @@ var
   aDM: TMGProjectDM;
 //  aDlg: TMGProjectNewDialog;
 begin
-  aDM := TMGProjectDM.Create;
+  aDM := TMGProjectDM.CreateNew;
   FProjectDMs.Add(aDM);
 
   result := aDM;

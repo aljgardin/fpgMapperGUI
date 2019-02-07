@@ -6,7 +6,7 @@ interface
 
 uses
 
-  Classes, GMapper, tiObject, tiLog;
+  Classes, guiMapper, tiObject, tiLog;
 
 //type
 //  TSubjectByMediatorName = class(TObject)
@@ -38,7 +38,7 @@ Begin
 
   case aMediatorName of
 
-    'Project': 
+    'Project':
       result := TGMapProject(aObject);
 
     'Project.Units': 

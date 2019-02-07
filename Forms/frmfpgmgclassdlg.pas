@@ -1,6 +1,7 @@
 unit frmfpgmgclassDlg;
 
 {$mode objfpc}{$H+}
+{$DEFINE DEBUG}
 
 interface
 
@@ -8,48 +9,23 @@ uses
   {$IFDEF UNIX}
   cthreads,
   {$ENDIF}
-  SysUtils, Classes, fpg_base, fpg_main, fpg_Button,
-  tiObject, tiLog, agtiguihelper, agtidefaultdialogFPG, GMapper,
+  SysUtils, Classes, fpg_base, fpg_main,
+  tiObject, tiLog,
+  agtiguihelper, agfpgBaseDialogEditTiopf,
+  GuiMapper,
   {%units 'Auto-generated GUI code'}
-  fpg_form, fpg_panel, fpg_label, fpg_edit, fpg_combobox, fpg_tab, fpg_CheckBox,
-  fpg_Grid
+  fpg_form, fpg_label, fpg_edit, fpg_combobox, fpg_panel, fpg_tab,
   {%endunits}
-  ;
+  fpg_checkbox, fpg_Grid, fpg_splitter;
 
 type
 
   { TfpgMGClassDlg }
 
-  //  1)  Create a new form in UIDesigner.
-  //  2)  Save it.
-  //  3)  Add agtiDialogPackFPG to project requirements.
-  //  4)  Add agtiDefaultDialogFPG to Interface Uses.
-  //  5)  Then change the Class derrived from to TagtiDefaultDialogFPG.
-  //  6)  Add: protected procedure SetupMediator; override;
-  //  7)  Overide Create(AOwner: TComponent);
-  //        And Set the FDataType: TtiObject to Dialog DataType.
-  //
-  //    To ShowModal call Class Function Edit.
-  //    To Create:
-  //      A)  create(AOwner: TComponent);
-  //            Then Call SetDataOnce. Then Show or ShowModal.
-  //      B)  Create(AOwner: TComponent; AData: TtiObject);
-  //            Then Show or ShowModal.
-  //
-  //    To Edit Again with uiDesigner:
-  //      Change the derived class to TfpgForm.
-  //      remark out override for procedure Setupmediator.
-  //      open with UIDesigner and make changes.
-  //      goto 2 above.
-  //
-
-  TfpgMGClassDlg = class(TagtiDefaultDialogFPG{TfpgForm})
+  TfpgMGClassDlg = class(TagfpgBaseDialogEditTiopf{TfpgForm})
   private
     {%region 'Auto Generated' -fold}
     {@VFD_HEAD_BEGIN: fpgMGClassDef}
-    pnlButton: TfpgPanel;
-    btnOK: TfpgButton;
-    btnCancel: TfpgButton;
     lblBaseClassName: TfpgLabel;
     EdtBaseClassName: TfpgEdit;
     lblBaseClassParent: TfpgLabel;
@@ -64,6 +40,7 @@ type
     edtOrmClassName: TfpgEdit;
     pnlCheckBoxes: TfpgPanel;
     pnlCBLeft: TfpgPanel;
+    splCheckBoxes: TfpgSplitter;
     pnlCBRight: TfpgPanel;
     cbAutoCreateBase: TfpgCheckBox;
     cbAutoCreateListClass: TfpgCheckBox;
@@ -74,7 +51,9 @@ type
     tsPropeties: TfpgTabSheet;
     sgProperties: TfpgStringGrid;
     tsOrmMapping: TfpgTabSheet;
+    lblOrmTop: TfpgLabel;
     pnlOrmTop: TfpgPanel;
+    splOrmPanels: TfpgSplitter;
     pnlORMLeft: TfpgPanel;
     pnlOrmRight: TfpgPanel;
     lblTableName: TfpgLabel;
@@ -95,12 +74,11 @@ type
     {%endregion}
   protected
     // Just add and override procedure SetupMediator for each new Dialog.
-    procedure SetupMediator; override;
+    procedure SetupMediators; override;
+
+    function DataAsType: TGMapClassDef; reintroduce;
 
   public
-    //  Override this:
-    constructor Create(AOwner: TComponent); override;
-    Destructor Destroy; override;
     procedure AfterCreate; override;
 
   published
@@ -141,100 +119,66 @@ procedure TfpgMGClassDlg.AfterCreate;
 const
   cProcHead = 'procedure TfpgMGClassDlg.AfterCreate';
 begin
-  log(cprochead);
+  inherited AfterCreate;
+
+  //log(cprochead);
+
   {%region 'Auto-generated GUI code' -fold}
   {@VFD_BODY_BEGIN: fpgMGClassDef}
   Name := 'fpgMGClassDef';
-  SetPosition(327, 80, 608, 752);
+  SetPosition(966, 256, 568, 694);
   WindowTitle := 'Eidt Class Define';
-  Hint := '';
   IconName := '';
-  ShowHint := True;
   BackGroundColor := $80000001;
-
-  pnlButton := TfpgPanel.Create(self);
-  with pnlButton do
-  begin
-    Name := 'pnlButton';
-    SetPosition(0, 712, 608, 40);
-    Align := alTop;
-    FontDesc := '#Label1';
-    Hint := '';
-    Text := '';
-  end;
-
-  btnOK := TfpgButton.Create(pnlButton);
-  with btnOK do
-  begin
-    Name := 'btnOK';
-    SetPosition(8, 8, 80, 22);
-    Text := 'OK';
-    FontDesc := '#Label1';
-    Hint := '';
-    ImageName := '';
-    ModalResult := mrOK;
-    OnClick := @btnOKOnClick;
-    TabOrder := 1;
-  end;
-
-  btnCancel := TfpgButton.Create(pnlButton);
-  with btnCancel do
-  begin
-    Name := 'btnCancel';
-    SetPosition(92, 8, 80, 22);
-    Text := 'Cancel';
-    FontDesc := '#Label1';
-    Hint := '';
-    ImageName := '';
-    ModalResult := mrCancel;
-    TabOrder := 2;
-    OnClick := @btnCancelOnClick;
-  end;
+  Hint := '';
 
   lblBaseClassName := TfpgLabel.Create(self);
   with lblBaseClassName do
   begin
     Name := 'lblBaseClassName';
-    SetPosition(0, 0, 608, 14);
+    SetPosition(0, 0, 545, 14);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := 'Class Name (Base Class Name)';
+    Hint := '';
   end;
 
   EdtBaseClassName := TfpgEdit.Create(self);
   with EdtBaseClassName do
   begin
     Name := 'EdtBaseClassName';
-    SetPosition(0, 14, 608, 24);
+    SetPosition(0, 14, 545, 24);
     Align := alTop;
     ExtraHint := '';
     FontDesc := '#Edit1';
-    Hint := '';
+    ParentShowHint := False;
     TabOrder := 3;
     Text := '';
+    Hint := '';
   end;
 
   lblBaseClassParent := TfpgLabel.Create(self);
   with lblBaseClassParent do
   begin
     Name := 'lblBaseClassParent';
-    SetPosition(0, 38, 608, 14);
+    SetPosition(0, 38, 545, 14);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := 'Base (Super) Class Parent';
+    Hint := '';
   end;
 
   edtBaseClassParent := TfpgEdit.Create(self);
   with edtBaseClassParent do
   begin
-    Name := 'Edit1';
-    SetPosition(0, 52, 608, 24);
+    Name := 'edtBaseClassParent';
+    SetPosition(0, 52, 545, 24);
     Align := alTop;
     ExtraHint := '';
     FontDesc := '#Edit1';
-    Hint := '';
+    ParentShowHint := False;
     TabOrder := 5;
     Text := '';
   end;
@@ -243,109 +187,119 @@ begin
   with lblBaseUnitName do
   begin
     Name := 'lblBaseUnitName';
-    SetPosition(0, 76, 608, 14);
+    SetPosition(0, 76, 545, 14);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := 'Base Unit Name';
+    Hint := '';
   end;
 
   edtBaseUnitName := TfpgEdit.Create(self);
   with edtBaseUnitName do
   begin
     Name := 'edtBaseUnitName';
-    SetPosition(0, 90, 608, 24);
+    SetPosition(0, 90, 545, 24);
     Align := alTop;
     ExtraHint := '';
     FontDesc := '#Edit1';
-    Hint := '';
+    ParentShowHint := False;
     TabOrder := 7;
     Text := '';
+    Hint := '';
   end;
 
   lblCrud := TfpgLabel.Create(self);
   with lblCrud do
   begin
     Name := 'lblCrud';
-    SetPosition(0, 114, 608, 14);
+    SetPosition(0, 114, 545, 14);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := 'Crud';
+    Hint := '';
   end;
 
   edtCrud := TfpgEdit.Create(self);
   with edtCrud do
   begin
     Name := 'edtCrud';
-    SetPosition(0, 128, 608, 24);
+    SetPosition(0, 128, 545, 24);
     Align := alTop;
     ExtraHint := '';
     FontDesc := '#Edit1';
-    Hint := '';
+    ParentShowHint := False;
     TabOrder := 9;
     Text := '';
+    Hint := '';
   end;
 
   lblDefType := TfpgLabel.Create(self);
   with lblDefType do
   begin
     Name := 'lblDefType';
-    SetPosition(0, 152, 608, 14);
+    SetPosition(0, 152, 545, 14);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := 'Define Type';
+    Hint := '';
   end;
 
   cbDefType := TfpgComboBox.Create(self);
   with cbDefType do
   begin
     Name := 'cbDefType';
-    SetPosition(0, 166, 608, 24);
+    SetPosition(0, 166, 545, 24);
     Align := alTop;
     ExtraHint := '';
     FontDesc := '#List';
-    Hint := '';
     Items.Add('dtReference');
     Items.Add('dtCreate');
     FocusItem := -1;
+    ParentShowHint := False;
     TabOrder := 11;
+    Hint := '';
   end;
 
   lblOrmClassName := TfpgLabel.Create(self);
   with lblOrmClassName do
   begin
     Name := 'lblOrmClassName';
-    SetPosition(0, 190, 608, 14);
+    SetPosition(0, 190, 545, 14);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := 'Orm Class Name';
+    Hint := '';
   end;
 
   edtOrmClassName := TfpgEdit.Create(self);
   with edtOrmClassName do
   begin
     Name := 'edtOrmClassName';
-    SetPosition(0, 204, 608, 24);
+    SetPosition(0, 204, 545, 24);
     Align := alTop;
     ExtraHint := '';
     FontDesc := '#Edit1';
-    Hint := '';
+    ParentShowHint := False;
     TabOrder := 13;
     Text := '';
+    Hint := '';
   end;
 
   pnlCheckBoxes := TfpgPanel.Create(self);
   with pnlCheckBoxes do
   begin
     Name := 'pnlCheckBoxes';
-    SetPosition(0, 228, 608, 65);
+    SetPosition(0, 228, 568, 65);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := '';
+    Hint := '';
+    MinWidth := 568;
   end;
 
   pnlCBLeft := TfpgPanel.Create(pnlCheckBoxes);
@@ -355,19 +309,31 @@ begin
     SetPosition(2, 2, 280, 61);
     Align := alLeft;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := '';
+    Hint := '';
+    MinWidth := 280;
+  end;
+
+  splCheckBoxes := TfpgSplitter.Create(pnlCheckBoxes);
+  with splCheckBoxes do
+  begin
+    Name := 'SplCheckBoxes';
+    SetPosition(282, 2, 8, 61);
+    Align := alLeft;
   end;
 
   pnlCBRight := TfpgPanel.Create(pnlCheckBoxes);
   with pnlCBRight do
   begin
     Name := 'pnlCBRight';
-    SetPosition(282, 2, 324, 61);
+    SetPosition(290, 2, 280, 61);
     Align := alClient;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := '';
+    Hint := '';
+    MinWidth := 280;
   end;
 
   cbAutoCreateBase := TfpgCheckBox.Create(pnlCBLeft);
@@ -377,9 +343,10 @@ begin
     SetPosition(2, 2, 276, 18);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     TabOrder := 1;
     Text := 'Auto Create Base';
+    Hint := '';
   end;
 
   cbAutoCreateListClass := TfpgCheckBox.Create(pnlCBLeft);
@@ -389,9 +356,10 @@ begin
     SetPosition(2, 20, 276, 18);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     TabOrder := 2;
     Text := 'Auto Create List Class';
+    Hint := '';
   end;
 
   cbAutoMap := TfpgCheckBox.Create(pnlCBLeft);
@@ -401,51 +369,55 @@ begin
     SetPosition(2, 38, 276, 18);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     TabOrder := 3;
     Text := 'Register Auto Map (Required for Querying)';
+    Hint := '';
   end;
 
   cbForwardDeclare := TfpgCheckBox.Create(pnlCBRight);
   with cbForwardDeclare do
   begin
     Name := 'cbForwardDeclare';
-    SetPosition(2, 2, 320, 18);
+    SetPosition(2, 2, 249, 18);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     TabOrder := 1;
     Text := 'Forward Declare';
+    Hint := '';
   end;
 
   cbNotifyObservers := TfpgCheckBox.Create(pnlCBRight);
   with cbNotifyObservers do
   begin
     Name := 'cbNotifyObservers';
-    SetPosition(2, 20, 320, 18);
+    SetPosition(2, 20, 249, 18);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     TabOrder := 2;
     Text := 'Notify Observers of Property Changes';
+    Hint := '';
   end;
 
   pcProperties := TfpgPageControl.Create(self);
   with pcProperties do
   begin
     Name := 'pcProperties';
-    SetPosition(0, 293, 608, 419);
-    ActivePageIndex := 3;
+    SetPosition(0, 293, 545, 401);
+    ActivePageIndex := 1;
     Align := alClient;
-    Hint := '';
+    ParentShowHint := False;
     TabOrder := 15;
+    Hint := '';
   end;
 
   tsPropeties := TfpgTabSheet.Create(pcProperties);
   with tsPropeties do
   begin
     Name := 'tsPropeties';
-    SetPosition(3, 24, 602, 392);
+    SetPosition(3, 24, 539, 374);
     Anchors := [anLeft,anRight,anTop,anBottom];
     Text := 'Propeties';
   end;
@@ -454,61 +426,87 @@ begin
   with sgProperties do
   begin
     Name := 'sgProperties';
-    SetPosition(0, 0, 602, 392);
+    SetPosition(0, 0, 539, 374);
     Align := alClient;
     BackgroundColor := TfpgColor($80000002);
     FontDesc := '#Grid';
     HeaderFontDesc := '#GridHeader';
-    Hint := '';
+    ParentShowHint := False;
     RowCount := 0;
     RowSelect := False;
     TabOrder := 1;
+    Hint := '';
   end;
 
   tsOrmMapping := TfpgTabSheet.Create(pcProperties);
   with tsOrmMapping do
   begin
     Name := 'tsOrmMapping';
-    SetPosition(3, 24, 602, 392);
+    SetPosition(3, 24, 568, 374);
     Anchors := [anLeft,anRight,anTop,anBottom];
     Text := 'ORM Mapping';
+  end;
+
+  lblOrmTop := TfpgLabel.Create(tsOrmMapping);
+  with lblOrmTop do
+  begin
+    Name := 'lblOrmTop';
+    SetPosition(0, 0, 539, 20);
+    Align := alTop;
+    FontDesc := '#GridHeader';
+    ParentShowHint := False;
+    Text := 'Class <--> Database:';
+    Hint := '';
   end;
 
   pnlOrmTop := TfpgPanel.Create(tsOrmMapping);
   with pnlOrmTop do
   begin
-    Name := 'Panel1';
-    SetPosition(0, 0, 602, 95);
+    Name := 'pnlOrmTop';
+    SetPosition(0, 20, 568, 95);
     Align := alTop;
     Alignment := taLeftJustify;
     BorderStyle := bsDouble;
     FontDesc := '#Label1';
-    Hint := '';
     Layout := tlTop;
+    ParentShowHint := False;
     Style := bsLowered;
     Text := 'Class <--> Database';
+    Hint := '';
   end;
 
   pnlORMLeft := TfpgPanel.Create(pnlOrmTop);
   with pnlORMLeft do
   begin
     Name := 'pnlORMLeft';
-    SetPosition(2, 2, 301, 91);
+    SetPosition(2, 2, 280, 91);
     Align := alLeft;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := '';
+    Hint := '';
+    MinWidth := 280;
+  end;
+
+  splOrmPanels := TfpgSplitter.Create(pnlOrmTop);
+  with splOrmPanels do
+  begin
+    Name := 'SplOrmPanels';
+    SetPosition(4, 2, 8, 91);
+    Align := alLeft;
   end;
 
   pnlOrmRight := TfpgPanel.Create(pnlOrmTop);
   with pnlOrmRight do
   begin
     Name := 'pnlOrmRight';
-    SetPosition(303, 2, 297, 91);
+    SetPosition(303, 2, 280, 91);
     Align := alClient;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := '';
+    Hint := '';
+    MinWidth := 280;
   end;
 
   lblTableName := TfpgLabel.Create(pnlORMLeft);
@@ -518,8 +516,9 @@ begin
     SetPosition(2, 2, 297, 14);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := 'Table Name';
+    Hint := '';
   end;
 
   edtTableName := TfpgEdit.Create(pnlORMLeft);
@@ -530,9 +529,10 @@ begin
     Align := alTop;
     ExtraHint := '';
     FontDesc := '#Edit1';
-    Hint := '';
+    ParentShowHint := False;
     TabOrder := 2;
     Text := '';
+    Hint := '';
   end;
 
   lblDatabaseFieldName := TfpgLabel.Create(pnlORMLeft);
@@ -542,8 +542,9 @@ begin
     SetPosition(2, 40, 297, 14);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := 'Database PK Field Name';
+    Hint := '';
   end;
 
   edtDatabsePKFieldName := TfpgEdit.Create(pnlORMLeft);
@@ -554,90 +555,97 @@ begin
     Align := alTop;
     ExtraHint := '';
     FontDesc := '#Edit1';
-    Hint := '';
+    ParentShowHint := False;
     TabOrder := 4;
     Text := '';
+    Hint := '';
   end;
 
   lblOIDType := TfpgLabel.Create(pnlOrmRight);
   with lblOIDType do
   begin
     Name := 'lblOIDType';
-    SetPosition(2, 2, 293, 14);
+    SetPosition(2, 2, 230, 14);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := 'OID Type';
+    Hint := '';
   end;
 
   cbOIDType := TfpgComboBox.Create(pnlOrmRight);
   with cbOIDType do
   begin
     Name := 'cbOIDType';
-    SetPosition(2, 16, 293, 24);
+    SetPosition(2, 16, 230, 24);
     Align := alTop;
     ExtraHint := '';
     FontDesc := '#List';
-    Hint := '';
     FocusItem := -1;
+    ParentShowHint := False;
     TabOrder := 2;
+    Hint := '';
   end;
 
   lblClassPKPropertyName := TfpgLabel.Create(pnlOrmRight);
   with lblClassPKPropertyName do
   begin
     Name := 'lblClassPKPropertyName';
-    SetPosition(2, 40, 293, 14);
+    SetPosition(2, 40, 230, 14);
     Align := alTop;
     FontDesc := '#Label1';
-    Hint := '';
+    ParentShowHint := False;
     Text := 'Class PK Property Name';
+    Hint := '';
   end;
 
   EdtClassPKPropertyName := TfpgEdit.Create(pnlOrmRight);
   with EdtClassPKPropertyName do
   begin
     Name := 'EdtClassPKPropertyName';
-    SetPosition(2, 54, 293, 24);
+    SetPosition(2, 54, 230, 24);
     Align := alTop;
     ExtraHint := '';
     FontDesc := '#Edit1';
-    Hint := '';
+    ParentShowHint := False;
     TabOrder := 4;
     Text := '';
+    Hint := '';
   end;
 
   lblPropertyMaps := TfpgLabel.Create(tsOrmMapping);
   with lblPropertyMaps do
   begin
     Name := 'lblPropertyMaps';
-    SetPosition(0, 95, 602, 20);
+    SetPosition(0, 115, 539, 20);
     Align := alTop;
     FontDesc := '#GridHeader';
-    Hint := '';
+    ParentShowHint := False;
     Text := 'Property Maps';
+    Hint := '';
   end;
 
   sgPropertyMaps := TfpgStringGrid.Create(tsOrmMapping);
   with sgPropertyMaps do
   begin
     Name := 'sgPropertyMaps';
-    SetPosition(0, 115, 602, 277);
+    SetPosition(0, 135, 539, 239);
     Align := alClient;
     BackgroundColor := TfpgColor($80000002);
     FontDesc := '#Grid';
     HeaderFontDesc := '#GridHeader';
-    Hint := '';
+    ParentShowHint := False;
     RowCount := 0;
     RowSelect := False;
     TabOrder := 3;
+    Hint := '';
   end;
 
   tsValidators := TfpgTabSheet.Create(pcProperties);
   with tsValidators do
   begin
     Name := 'tsValidators';
-    SetPosition(3, 24, 602, 392);
+    SetPosition(3, 24, 539, 374);
     Anchors := [anLeft,anRight,anTop,anBottom];
     Text := 'Validators';
   end;
@@ -646,22 +654,23 @@ begin
   with sgValidators do
   begin
     Name := 'sgValidators';
-    SetPosition(0, 0, 602, 392);
+    SetPosition(0, 0, 539, 374);
     Align := alClient;
     BackgroundColor := TfpgColor($80000002);
     FontDesc := '#Grid';
     HeaderFontDesc := '#GridHeader';
-    Hint := '';
+    ParentShowHint := False;
     RowCount := 0;
     RowSelect := False;
     TabOrder := 1;
+    Hint := '';
   end;
 
   tsSelections := TfpgTabSheet.Create(pcProperties);
   with tsSelections do
   begin
     Name := 'tsSelections';
-    SetPosition(3, 24, 602, 392);
+    SetPosition(3, 24, 847, 791);
     Anchors := [anLeft,anRight,anTop,anBottom];
     Text := 'Selections';
   end;
@@ -670,22 +679,21 @@ begin
   with sgSelections do
   begin
     Name := 'sgSelections';
-    SetPosition(0, 0, 602, 392);
+    SetPosition(0, 0, 847, 791);
     Align := alClient;
     BackgroundColor := TfpgColor($80000002);
     FontDesc := '#Grid';
     HeaderFontDesc := '#GridHeader';
-    Hint := '';
+    ParentShowHint := False;
     RowCount := 0;
     RowSelect := False;
     TabOrder := 1;
+    Hint := '';
   end;
+
   {@VFD_BODY_END: fpgMGClassDef}
   {%endregion}
 
-  //FBuffer := TtiObject.Create;
-  WindowPosition := wpScreenCenter;
-  OnShow := @FrmOnShow;
 end;
 
 class function TfpgMGClassDlg.DataType: TtiClass;
@@ -693,15 +701,18 @@ begin
   result := TGMapClassDef;
 end;
 
-procedure TfpgMGClassDlg.SetupMediator;
+procedure TfpgMGClassDlg.SetupMediators;
 const cPHD = 'procedure TfpgMGClassDlg.SetupMediator';
 const cPHN = 'SetupMediator';
+
 var
-  tdata: TGMapClassDef;
+  zData: TGMapClassDef;
+
 begin
   Log(cPHD);
-  inherited SetupMediator;
-  tData := TGMapClassDef(Data);
+  //inherited SetupMediator;
+
+  zData := TGMapClassDef(FData);
 
   //published
   //  property    AutoCreateBase: boolean read FAutoCreateBase write SetAutoCreateBase;
@@ -716,16 +727,16 @@ begin
   //  property    ORMClassName: string read FORMClassName write SetORMClassName;
   //  property    NotifyObserversOfPropertyChanges: boolean read FNotifyObserversOfPropertyChanges write SetNotifyObserversOfPropertyChanges default False;
 
-  Helper.SetupPropertyMediator(tData, 'AutoCreateBase', self.cbAutoCreateBase, 'Class');
-  Helper.SetupPropertyMediator(tData, 'AutoMap', self.cbAutoMap, 'Class');
-  Helper.SetupPropertyMediator(tData, 'BaseClassName', self.edtBaseClassName, 'Class');
-  Helper.SetupPropertyMediator(tData, 'BaseClassParent', self.EdtBaseClassParent, 'Class');
-  Helper.SetupPropertyMediator(tData, 'BaseUnitName', self.edtBaseUnitName, 'Class');
-  Helper.SetupPropertyMediator(tData, 'Crud', self.edtCrud, 'Class');
-  Helper.SetupPropertyMediator(tData, 'DefType', self.cbDefType, 'Class');
-  Helper.SetupPropertyMediator(tData, 'ForwardDeclare', self.cbForwardDeclare, 'Class');
-  Helper.SetupPropertyMediator(tData, 'ORMClassName', self.edtOrmClassName, 'Class');
-  Helper.SetupPropertyMediator(tData, 'NotifyObserversOfPropertyChanges', self.cbNotifyObservers, 'Class');
+  FHelper.SetupPropertyMediator(DataAsType, 'AutoCreateBase', self.cbAutoCreateBase, 'Class');
+  FHelper.SetupPropertyMediator(DataAsType, 'AutoMap', self.cbAutoMap, 'Class');
+  FHelper.SetupPropertyMediator(DataAsType, 'BaseClassName', self.edtBaseClassName, 'Class');
+  FHelper.SetupPropertyMediator(DataAsType, 'BaseClassParent', self.EdtBaseClassParent, 'Class');
+  FHelper.SetupPropertyMediator(DataAsType, 'BaseUnitName', self.edtBaseUnitName, 'Class');
+  FHelper.SetupPropertyMediator(DataAsType, 'Crud', self.edtCrud, 'Class');
+  FHelper.SetupPropertyMediator(DataAsType, 'DefType', self.cbDefType, 'Class');
+  FHelper.SetupPropertyMediator(DataAsType, 'ForwardDeclare', self.cbForwardDeclare, 'Class');
+  FHelper.SetupPropertyMediator(DataAsType, 'ORMClassName', self.edtOrmClassName, 'Class');
+  FHelper.SetupPropertyMediator(DataAsType, 'NotifyObserversOfPropertyChanges', self.cbNotifyObservers, 'Class');
 
   //public
   //  // Object Props
@@ -735,33 +746,33 @@ begin
   //  property    Validators: TMapValidatorList read FValidators;
 
   //  property    ClassProps: TMapClassPropList read FClassProps write SetClassProps;
-  Helper.SetupListMediator(tData.ClassProps, TGMapClassProp, self.sgProperties, '@', 'Class.ClassProps', 'Class.ClassProps.@Selected');
+  FHelper.SetupListMediator(DataAsType.ClassProps, TGMapClassProp, sgProperties, '@', 'Class.ClassProps', 'Class.ClassProps.@Selected');
+
+  //  property    ClassMapping: TClassMapping read FClassMapping;
   //published
-  //  property    Name: string read FName write SetPropName;
-  //  property    PropertyType: TMapPropType read FPropertyType write SetPropType;
-  //  property    PropTypeName: string read FPropTypeName write SetPropTypeName;
-  //  property    IsReadOnly: boolean read FIsReadOnly write SetIsReadOnly;
-  //ClassProps.Selected:
+    //property    TableName: string read FTableName write SetTableName;
+    //property    PKName: string read FPKName write SetPKName;
+    //property    PKField: string read FPKField write SetPKField;
+    //property    OIDType: TOIDType read FOIDType write SetOIDType;
+    ////Object Properties:
+    //property    PropMappings: TgPropMappingList read FPropMappings;
+  FHelper.SetupPropertyMediator(DataAsType.ClassMapping, 'TableName', self.edtTableName, 'ClassMapping');
+  FHelper.SetupPropertyMediator(DataAsType.ClassMapping, 'PKName', Self.edtDatabsePKFieldName, 'ClassMapping');
+  FHelper.SetupPropertyMediator(DataAsType.ClassMapping, 'PKField', self.edtDatabsePKFieldName, 'ClassMapping');
+  FHelper.SetupPropertyMediator(DataAsType.ClassMapping, 'OIDType', self.cbOIDType, 'ClassMapping');
+  FHelper.SetupListMediator(DataAsType.ClassMapping.PropMappings, TGPropMapping, self.sgPropertyMaps, '@', 'ClassMapping.PropMappings', 'ClassMapping.PropMappings.@Selected');
 
-  //  Helper.SetupPropertyMediator(TGMapClassProp, 'Name', lblClassPropertySelected, 'Class.ClassProps.Selected', 'Class.ClassProps', '@Selected', TGMapClassPropList, false);
+  //  property    Selections: TClassMappingSelectList read FSelections;
+  FHelper.SetupListMediator(DataAsType.Selections, TGClassMappingSelect, sgSelections, '@', 'Class.Selections', 'Class.Selections.@Selected');
 
-
-  //  Helper.SetupListMediator(tData.ClassMapping, TGClassMapping, self.sgPropertyMaps, '@', 'Class.ClassMapping');
-  //  Helper.SetupListMediator(tData.Selections,
-
+  //  property    Validators: TMapValidatorList read FValidators;
+  FHelper.SetupListMediator(DataAsType.Validators, TGMapValidator, sgValidators, '@', 'Class.Validators', 'Class.Validators.@Selected');
 end;
 
-constructor TfpgMGClassDlg.Create(AOwner: TComponent);
+function TfpgMGClassDlg.DataAsType: TGMapClassDef;
 begin
-  inherited Create(AOwner);
-end;
-
-destructor TfpgMGClassDlg.Destroy;
-const
-  cProcHead = 'destructor TfpgMGClassDlg.Destroy';
-begin
-  log(cProcHead);
-  inherited Destroy;
+  Assert(DataType.ClassName = result.ClassName, 'Error!.  DataType and DataTyped ClassNames do not match.');
+  result := FData as TGMapClassDef;
 end;
 
 end.

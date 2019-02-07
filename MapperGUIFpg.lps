@@ -2,34 +2,30 @@
 <CONFIG>
   <ProjectSession>
     <PathDelim Value="\"/>
-    <Version Value="10"/>
+    <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="107">
+    <Units Count="69">
       <Unit0>
         <Filename Value="MapperGUIFpg.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="4"/>
-        <TopLine Value="20"/>
-        <CursorPos Y="41"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="12"/>
         <UsageCount Value="245"/>
-        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="umgdatamanager.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uMGDataManager"/>
-        <EditorIndex Value="6"/>
-        <TopLine Value="131"/>
-        <CursorPos Y="146"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="136"/>
+        <CursorPos Y="145"/>
         <UsageCount Value="245"/>
-        <Loaded Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="common\mgfpgdialogs.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="mgFpgDialogs"/>
         <EditorIndex Value="-1"/>
-        <CursorPos X="18" Y="5"/>
         <UsageCount Value="237"/>
       </Unit2>
       <Unit3>
@@ -43,84 +39,78 @@
       <Unit4>
         <Filename Value="MGSubjectByMediatorName.pas"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="5"/>
-        <CursorPos X="29"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="53"/>
+        <CursorPos X="39" Y="66"/>
         <UsageCount Value="261"/>
-        <Loaded Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="mgview.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="mgView"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="5"/>
         <CursorPos X="70" Y="11"/>
-        <UsageCount Value="142"/>
+        <UsageCount Value="211"/>
       </Unit5>
       <Unit6>
         <Filename Value="Forms\frmfpgMapperGUIMain.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="frmFpgMapperGUIMain"/>
-        <TopLine Value="1958"/>
-        <CursorPos X="57" Y="1977"/>
-        <UsageCount Value="141"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="816"/>
+        <CursorPos Y="826"/>
+        <UsageCount Value="210"/>
+        <Bookmarks Count="3">
+          <Item0 X="15" Y="536" ID="1"/>
+          <Item1 Y="908" ID="8"/>
+          <Item2 Y="809" ID="7"/>
+        </Bookmarks>
       </Unit6>
       <Unit7>
         <Filename Value="Forms\frmfpgmgclassdlg.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="frmfpgmgclassDlg"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="728"/>
-        <CursorPos X="107" Y="740"/>
-        <UsageCount Value="95"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3"/>
+        <CursorPos Y="11"/>
+        <UsageCount Value="213"/>
       </Unit7>
       <Unit8>
-        <Filename Value="Forms\frmfpgMGDefaultDialog.pas"/>
-        <IsPartOfProject Value="True"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="95"/>
-      </Unit8>
-      <Unit9>
         <Filename Value="Forms\frmfpgmgenumdlg.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="frmfpgMGEnumDlg"/>
-        <EditorIndex Value="2"/>
-        <TopLine Value="66"/>
-        <CursorPos X="107" Y="79"/>
-        <UsageCount Value="118"/>
-        <Loaded Value="True"/>
-      </Unit9>
-      <Unit10>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="25"/>
+        <UsageCount Value="213"/>
+      </Unit8>
+      <Unit9>
         <Filename Value="Forms\frmfpgmgincludesdlg.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="frmfpgMGIncludesDlg"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="9"/>
         <CursorPos X="3" Y="22"/>
-        <UsageCount Value="95"/>
-        <Loaded Value="True"/>
-      </Unit10>
-      <Unit11>
+        <UsageCount Value="213"/>
+      </Unit9>
+      <Unit10>
         <Filename Value="umgregisterdialogs.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uMGRegisterDialogs"/>
-        <EditorIndex Value="7"/>
-        <TopLine Value="19"/>
-        <CursorPos X="59" Y="32"/>
-        <UsageCount Value="95"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="68"/>
+        <UsageCount Value="213"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="Forms\frmfpgMGDefaultDialog.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="170"/>
       </Unit11>
       <Unit12>
         <Filename Value="frmfpgMapperGUIMainForm.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="235"/>
         <CursorPos X="42" Y="255"/>
-        <UsageCount Value="211"/>
+        <UsageCount Value="100"/>
         <Bookmarks Count="2">
           <Item0 X="23" Y="470"/>
           <Item1 X="7" Y="1170" ID="6"/>
@@ -131,14 +121,14 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="86"/>
         <CursorPos Y="107"/>
-        <UsageCount Value="258"/>
+        <UsageCount Value="147"/>
       </Unit13>
       <Unit14>
         <Filename Value="common\agtipropertyguimanager.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="331"/>
         <CursorPos X="49" Y="331"/>
-        <UsageCount Value="258"/>
+        <UsageCount Value="147"/>
       </Unit14>
       <Unit15>
         <Filename Value="common\gmapper.pas"/>
@@ -146,7 +136,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="216"/>
         <CursorPos X="3" Y="224"/>
-        <UsageCount Value="203"/>
+        <UsageCount Value="92"/>
       </Unit15>
       <Unit16>
         <Filename Value="frmfpgmgenumdialog.pas"/>
@@ -154,13 +144,13 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="66"/>
         <CursorPos X="22" Y="77"/>
-        <UsageCount Value="259"/>
+        <UsageCount Value="148"/>
       </Unit16>
       <Unit17>
         <Filename Value="MenuReference.txt"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="18"/>
-        <UsageCount Value="188"/>
+        <UsageCount Value="77"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit17>
       <Unit18>
@@ -169,7 +159,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="566"/>
         <CursorPos X="68" Y="566"/>
-        <UsageCount Value="233"/>
+        <UsageCount Value="122"/>
       </Unit18>
       <Unit19>
         <Filename Value="common\agobjectfactory.pas"/>
@@ -177,7 +167,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="337"/>
         <CursorPos X="84" Y="337"/>
-        <UsageCount Value="233"/>
+        <UsageCount Value="122"/>
       </Unit19>
       <Unit20>
         <Filename Value="common\agmgdialogs.pas"/>
@@ -185,12 +175,12 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="219"/>
         <CursorPos X="52" Y="230"/>
-        <UsageCount Value="201"/>
+        <UsageCount Value="90"/>
       </Unit20>
       <Unit21>
         <Filename Value="common\agtiguihelper.pas"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="202"/>
+        <UsageCount Value="91"/>
         <Bookmarks Count="3">
           <Item0 Y="1477" ID="1"/>
           <Item1 X="3" Y="1470" ID="4"/>
@@ -202,7 +192,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="189"/>
         <CursorPos Y="214"/>
-        <UsageCount Value="394"/>
+        <UsageCount Value="283"/>
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit22>
       <Unit23>
@@ -210,7 +200,7 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="502"/>
         <CursorPos X="3" Y="513"/>
-        <UsageCount Value="394"/>
+        <UsageCount Value="283"/>
       </Unit23>
       <Unit24>
         <Filename Value="common\agfpgscrollframe.pas"/>
@@ -218,752 +208,331 @@
         <EditorIndex Value="-1"/>
         <TopLine Value="8"/>
         <CursorPos X="18" Y="29"/>
-        <UsageCount Value="344"/>
+        <UsageCount Value="233"/>
       </Unit24>
       <Unit25>
         <Filename Value="frmfpgmgclassdlg.pas"/>
         <UnitName Value="frmfpgmgclassDlg"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="201"/>
+        <UsageCount Value="90"/>
       </Unit25>
       <Unit26>
         <Filename Value="frmfpgmgincludesdialog.pas"/>
         <UnitName Value="frmfpgMGIncludesDialog"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="73"/>
-        <UsageCount Value="131"/>
+        <UsageCount Value="20"/>
       </Unit26>
       <Unit27>
         <Filename Value="agfpg_dataguimanager.pas"/>
         <UnitName Value="agfpg_dataguiManager"/>
         <EditorIndex Value="-1"/>
         <CursorPos Y="31"/>
-        <UsageCount Value="202"/>
+        <UsageCount Value="91"/>
       </Unit27>
       <Unit28>
         <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiBaseMediator.pas"/>
-        <EditorIndex Value="14"/>
-        <TopLine Value="652"/>
-        <CursorPos X="3" Y="654"/>
-        <UsageCount Value="108"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="930"/>
+        <CursorPos Y="940"/>
+        <UsageCount Value="51"/>
       </Unit28>
       <Unit29>
         <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\GUI\fpGUI\tiListMediators.pas"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="96"/>
+        <TopLine Value="554"/>
+        <CursorPos Y="565"/>
+        <UsageCount Value="13"/>
       </Unit29>
       <Unit30>
         <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiModelMediator.pas"/>
-        <EditorIndex Value="15"/>
-        <TopLine Value="1003"/>
-        <CursorPos Y="1016"/>
-        <UsageCount Value="112"/>
-        <Loaded Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1120"/>
+        <CursorPos Y="1132"/>
+        <UsageCount Value="32"/>
       </Unit30>
       <Unit31>
-        <Filename Value="C:\newpascal\fpcsrc\rtl\objpas\classes\classesh.inc"/>
+        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiObject.pas"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="1876"/>
-        <CursorPos X="14" Y="1888"/>
-        <UsageCount Value="91"/>
+        <TopLine Value="1120"/>
+        <CursorPos Y="1131"/>
+        <UsageCount Value="51"/>
       </Unit31>
       <Unit32>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiObject.pas"/>
-        <EditorIndex Value="16"/>
-        <TopLine Value="575"/>
-        <CursorPos X="17" Y="586"/>
-        <UsageCount Value="101"/>
-        <Loaded Value="True"/>
-      </Unit32>
-      <Unit33>
         <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiBaseObject.pas"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="4"/>
-        <CursorPos X="3" Y="16"/>
-        <UsageCount Value="99"/>
-      </Unit33>
-      <Unit34>
+        <TopLine Value="119"/>
+        <CursorPos Y="131"/>
+        <UsageCount Value="43"/>
+      </Unit32>
+      <Unit33>
         <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\corelib\fpg_widget.pas"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="288"/>
-        <CursorPos Y="299"/>
-        <UsageCount Value="193"/>
+        <TopLine Value="615"/>
+        <CursorPos Y="626"/>
+        <UsageCount Value="100"/>
+      </Unit33>
+      <Unit34>
+        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiRTTI.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="544"/>
+        <CursorPos X="3" Y="551"/>
+        <UsageCount Value="5"/>
       </Unit34>
       <Unit35>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiRTTI.pas"/>
-        <EditorIndex Value="17"/>
-        <TopLine Value="506"/>
-        <CursorPos X="5" Y="512"/>
-        <UsageCount Value="111"/>
-        <Loaded Value="True"/>
-      </Unit35>
-      <Unit36>
-        <Filename Value="backup\frmfpgMapperGUIMainForm.pas;113"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1191"/>
-        <CursorPos Y="1199"/>
-        <UsageCount Value="78"/>
-        <DefaultSyntaxHighlighter Value="None"/>
-      </Unit36>
-      <Unit37>
         <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\gui\fpg_menu.pas"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="82"/>
-        <CursorPos X="3" Y="95"/>
-        <UsageCount Value="205"/>
-      </Unit37>
-      <Unit38>
+        <TopLine Value="126"/>
+        <CursorPos X="3" Y="142"/>
+        <UsageCount Value="125"/>
+      </Unit35>
+      <Unit36>
         <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\gui\fpg_form.pas"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="70"/>
-        <CursorPos X="17" Y="80"/>
-        <UsageCount Value="127"/>
-      </Unit38>
-      <Unit39>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiFilteredObjectList.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="10"/>
-        <CursorPos X="49" Y="4"/>
-        <UsageCount Value="54"/>
-      </Unit39>
-      <Unit40>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiCriteria.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="80"/>
-        <CursorPos X="3" Y="105"/>
-        <UsageCount Value="54"/>
-      </Unit40>
-      <Unit41>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\UnitTests\Tests\tiObject_TST.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1489"/>
-        <CursorPos X="3" Y="1491"/>
-        <UsageCount Value="54"/>
-      </Unit41>
-      <Unit42>
-        <Filename Value="common\agtiReferenceClassesCustom.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="587"/>
-        <CursorPos X="15" Y="611"/>
-        <UsageCount Value="54"/>
-      </Unit42>
-      <Unit43>
-        <Filename Value="C:\development\Extras\Graemeg-TIOPF_Apps.git\tiOPFMapper\mapper\mapper_project_writer.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="2015"/>
-        <CursorPos X="3" Y="2040"/>
-        <UsageCount Value="17"/>
-      </Unit43>
-      <Unit44>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiVisitor.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="97"/>
-        <CursorPos X="3" Y="109"/>
-        <UsageCount Value="94"/>
-      </Unit44>
-      <Unit45>
-        <Filename Value="C:\newpascal\fpcsrc\rtl\inc\objpash.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="193"/>
-        <CursorPos X="23" Y="205"/>
-        <UsageCount Value="94"/>
-      </Unit45>
-      <Unit46>
-        <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\gui\fpg_grid.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="176"/>
-        <CursorPos X="17" Y="188"/>
-        <UsageCount Value="104"/>
-      </Unit46>
-      <Unit47>
-        <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\gui\fpg_customgrid.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="48"/>
-        <CursorPos X="3" Y="61"/>
-        <UsageCount Value="103"/>
-      </Unit47>
-      <Unit48>
-        <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\gui\fpg_basegrid.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="29"/>
-        <CursorPos X="65" Y="43"/>
-        <UsageCount Value="104"/>
-      </Unit48>
-      <Unit49>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiUtils.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="797"/>
-        <CursorPos Y="808"/>
-        <UsageCount Value="6"/>
-      </Unit49>
-      <Unit50>
+        <TopLine Value="562"/>
+        <CursorPos X="3" Y="562"/>
+        <UsageCount Value="71"/>
+      </Unit36>
+      <Unit37>
         <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\gui\fpg_dialogs.pas"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="225"/>
-        <CursorPos X="11" Y="237"/>
-        <UsageCount Value="80336"/>
-      </Unit50>
-      <Unit51>
+        <TopLine Value="343"/>
+        <CursorPos Y="349"/>
+        <UsageCount Value="80225"/>
+      </Unit37>
+      <Unit38>
         <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\gui\fpg_memo.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="95"/>
         <CursorPos X="10" Y="95"/>
-        <UsageCount Value="80336"/>
-      </Unit51>
-      <Unit52>
+        <UsageCount Value="80225"/>
+      </Unit38>
+      <Unit39>
         <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\gui\fpg_window.pas"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="93"/>
-        <CursorPos Y="103"/>
-        <UsageCount Value="80463"/>
-      </Unit52>
-      <Unit53>
+        <TopLine Value="97"/>
+        <CursorPos Y="110"/>
+        <UsageCount Value="80357"/>
+      </Unit39>
+      <Unit40>
         <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\corelib\fpg_base.pas"/>
-        <EditorIndex Value="13"/>
-        <TopLine Value="65"/>
-        <CursorPos X="3" Y="78"/>
-        <UsageCount Value="80460"/>
-        <Loaded Value="True"/>
-      </Unit53>
-      <Unit54>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="291"/>
+        <CursorPos X="3" Y="304"/>
+        <UsageCount Value="80354"/>
+      </Unit40>
+      <Unit41>
         <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\corelib\gdi\fpg_gdi.pas"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="232"/>
-        <CursorPos X="38" Y="232"/>
-        <UsageCount Value="80335"/>
-      </Unit54>
-      <Unit55>
+        <TopLine Value="1946"/>
+        <CursorPos Y="1955"/>
+        <UsageCount Value="80241"/>
+      </Unit41>
+      <Unit42>
         <Filename Value="C:\newpascal\fpcsrc\rtl\objpas\sysutils\sysutilh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="100"/>
         <CursorPos X="19" Y="112"/>
-        <UsageCount Value="80335"/>
-      </Unit55>
-      <Unit56>
+        <UsageCount Value="80224"/>
+      </Unit42>
+      <Unit43>
         <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\corelib\fpg_main.pas"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="1450"/>
-        <CursorPos Y="1460"/>
-        <UsageCount Value="133"/>
-      </Unit56>
-      <Unit57>
-        <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\corelib\fpg_popupwindow.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="57"/>
-        <CursorPos X="22" Y="68"/>
-        <UsageCount Value="95"/>
-      </Unit57>
-      <Unit58>
-        <Filename Value="C:\newpascal\fpcsrc\rtl\inc\objpas.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="415"/>
-        <CursorPos X="12" Y="430"/>
-        <UsageCount Value="94"/>
-        <Bookmarks Count="1">
-          <Item0 X="12" Y="427" ID="7"/>
-        </Bookmarks>
-      </Unit58>
-      <Unit59>
-        <Filename Value="C:\development\Extras\Graemeg-TIOPF_Apps-AJG.git\tiopf_apps\tiOPFMapper\mapper\mapper.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="249"/>
-        <CursorPos Y="268"/>
-        <UsageCount Value="95"/>
-      </Unit59>
-      <Unit60>
-        <Filename Value="C:\development\Extras\Graemeg-TIOPF_Apps-AJG.git\tiopf_apps\tiOPFMapper\mapper\fpc_schema_reader.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1013"/>
-        <CursorPos X="68" Y="1035"/>
-        <UsageCount Value="95"/>
-      </Unit60>
-      <Unit61>
-        <Filename Value="C:\development\Extras\Graemeg-TIOPF_Apps-AJG.git\tiopf_apps\tiOPFMapper\mapper\mapper_project_writer.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="56"/>
-        <CursorPos X="45" Y="58"/>
-        <UsageCount Value="95"/>
-      </Unit61>
-      <Unit62>
+        <TopLine Value="60"/>
+        <CursorPos X="3" Y="60"/>
+        <UsageCount Value="58"/>
+      </Unit43>
+      <Unit44>
         <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\GUI\fpGUI\tiMediators.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="286"/>
         <CursorPos Y="298"/>
-        <UsageCount Value="130"/>
-      </Unit62>
-      <Unit63>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\GUI\fpGUI\tiRtfReport.pas"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="96"/>
-      </Unit63>
-      <Unit64>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiDefines.inc"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="4" Y="11"/>
-        <UsageCount Value="96"/>
-      </Unit64>
-      <Unit65>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\GUI\fpGUI\tiGUIUtils.pas"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="96"/>
-      </Unit65>
-      <Unit66>
+        <UsageCount Value="19"/>
+      </Unit44>
+      <Unit45>
         <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiLog.pas"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="177"/>
-      </Unit66>
-      <Unit67>
+        <UsageCount Value="66"/>
+      </Unit45>
+      <Unit46>
         <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiLogToFile.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="84"/>
         <CursorPos X="3" Y="90"/>
-        <UsageCount Value="177"/>
-      </Unit67>
-      <Unit68>
+        <UsageCount Value="66"/>
+      </Unit46>
+      <Unit47>
         <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\gui\fpg_scrollframe.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="496"/>
         <CursorPos Y="499"/>
-        <UsageCount Value="176"/>
-      </Unit68>
-      <Unit69>
+        <UsageCount Value="65"/>
+      </Unit47>
+      <Unit48>
         <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\gui\fpg_panel.pas"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="237"/>
-        <CursorPos X="3" Y="238"/>
-        <UsageCount Value="176"/>
-      </Unit69>
-      <Unit70>
+        <TopLine Value="439"/>
+        <CursorPos Y="457"/>
+        <UsageCount Value="70"/>
+      </Unit48>
+      <Unit49>
         <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\corelib\fpg_utils.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="110"/>
         <CursorPos X="18" Y="112"/>
-        <UsageCount Value="160"/>
-      </Unit70>
-      <Unit71>
+        <UsageCount Value="49"/>
+      </Unit49>
+      <Unit50>
         <Filename Value="C:\newpascal\fpcsrc\rtl\objpas\sysutils\osutilsh.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="36"/>
         <CursorPos X="10" Y="48"/>
-        <UsageCount Value="160"/>
-      </Unit71>
-      <Unit72>
+        <UsageCount Value="49"/>
+      </Unit50>
+      <Unit51>
         <Filename Value="C:\newpascal\fpcsrc\rtl\objpas\sysutils\osutil.inc"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="107"/>
         <CursorPos X="3" Y="110"/>
-        <UsageCount Value="160"/>
-      </Unit72>
-      <Unit73>
+        <UsageCount Value="49"/>
+      </Unit51>
+      <Unit52>
         <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\GUI\fpGUI\tiDialogs.pas"/>
         <EditorIndex Value="-1"/>
         <TopLine Value="60"/>
         <CursorPos X="13" Y="71"/>
-        <UsageCount Value="160"/>
-      </Unit73>
-      <Unit74>
-        <Filename Value="C:\newpascal\fpcsrc\rtl\objpas\classes\compon.inc"/>
+        <UsageCount Value="49"/>
+      </Unit52>
+      <Unit53>
+        <Filename Value="..\Laz\Packages\TIOPF\agtiAppHelpers\agtireferenceclasses.pas"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="457"/>
-        <CursorPos X="3" Y="460"/>
-        <UsageCount Value="95"/>
-      </Unit74>
-      <Unit75>
-        <Filename Value="C:\newpascal\fpcsrc\rtl\inc\systemh.inc"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1284"/>
-        <CursorPos X="11" Y="1295"/>
-        <UsageCount Value="31"/>
-      </Unit75>
-      <Unit76>
-        <Filename Value="C:\development\Extras\Graemeg-fpgui.git\src\gui\fpg_panel.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="225"/>
-        <CursorPos X="3" Y="237"/>
-        <UsageCount Value="27"/>
-      </Unit76>
-      <Unit77>
-        <Filename Value="C:\newpascal\fpcsrc\rtl\win32\classes.pp"/>
-        <UnitName Value="Classes"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="8"/>
-        <CursorPos X="9" Y="32"/>
-        <UsageCount Value="27"/>
-      </Unit77>
-      <Unit78>
-        <Filename Value="i386-win32\MGSubjectByMediatorName.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="17"/>
-        <CursorPos X="17" Y="28"/>
-        <UsageCount Value="10"/>
-      </Unit78>
-      <Unit79>
-        <Filename Value="C:\newpascal\fpcsrc\rtl\objpas\fgl.pp"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="90"/>
-        <CursorPos X="14" Y="104"/>
-        <UsageCount Value="8"/>
-      </Unit79>
-      <Unit80>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtipropertyguimanager.pas"/>
-        <EditorIndex Value="23"/>
-        <TopLine Value="292"/>
-        <CursorPos Y="302"/>
-        <UsageCount Value="34"/>
-        <Loaded Value="True"/>
-      </Unit80>
-      <Unit81>
-        <Filename Value="common\~mgAppSettings_bom.pas"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="9"/>
-      </Unit81>
-      <Unit82>
-        <Filename Value="common\agfpgguihelpers.pas"/>
-        <UnitName Value="agfpgGUIHelpers"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="8"/>
-      </Unit82>
-      <Unit83>
-        <Filename Value="common\mgAppSettings_bom.pas"/>
-        <EditorIndex Value="-1"/>
-        <WindowIndex Value="-1"/>
-        <TopLine Value="-1"/>
-        <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="9"/>
-      </Unit83>
-      <Unit84>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\fpg\umgdialogfactory.pas"/>
-        <UnitName Value="umgdialogFactory"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="3"/>
-      </Unit84>
-      <Unit85>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\Laz_tiMapper\gmapper.pas"/>
-        <UnitName Value="GMapper"/>
-        <EditorIndex Value="8"/>
-        <TopLine Value="474"/>
-        <CursorPos X="3" Y="490"/>
-        <UsageCount Value="34"/>
-        <Loaded Value="True"/>
-      </Unit85>
-      <Unit86>
-        <Filename Value="Forms\frmfpgMGDefaultScroll.pas"/>
-        <UnitName Value="frmfpgMGDefaultDialog"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="87"/>
-        <UsageCount Value="9"/>
-      </Unit86>
-      <Unit87>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\Mediators\Units\agtimediators.pas"/>
-        <UnitName Value="agtiMediators"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="31" Y="3"/>
-        <UsageCount Value="3"/>
-      </Unit87>
-      <Unit88>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtireferenceclasses.pas"/>
-        <EditorIndex Value="24"/>
-        <TopLine Value="592"/>
-        <CursorPos Y="601"/>
-        <UsageCount Value="43"/>
-        <Loaded Value="True"/>
-      </Unit88>
-      <Unit89>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtipropertygui_bom.pas"/>
-        <UnitName Value="agtipropertygui_BOM"/>
-        <EditorIndex Value="21"/>
-        <TopLine Value="50"/>
-        <CursorPos Y="58"/>
-        <UsageCount Value="34"/>
-        <Loaded Value="True"/>
-      </Unit89>
-      <Unit90>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
+        <TopLine Value="283"/>
+        <CursorPos X="31" Y="283"/>
+        <UsageCount Value="94"/>
+      </Unit53>
+      <Unit54>
+        <Filename Value="..\Laz\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="19"/>
-        <TopLine Value="422"/>
-        <CursorPos Y="427"/>
-        <UsageCount Value="47"/>
-        <Bookmarks Count="3">
-          <Item0 Y="1199" ID="1"/>
-          <Item1 X="3" Y="383" ID="8"/>
-          <Item2 Y="427" ID="9"/>
+        <TopLine Value="16"/>
+        <CursorPos X="3" Y="29"/>
+        <UsageCount Value="125"/>
+        <Bookmarks Count="1">
+          <Item0 Y="76" ID="3"/>
         </Bookmarks>
         <Loaded Value="True"/>
-      </Unit90>
-      <Unit91>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\GUI\LCL\tiMediators.pas"/>
+      </Unit54>
+      <Unit55>
+        <Filename Value="C:\lazarus\fpc\3.0.4\source\rtl\objpas\classes\classesh.inc"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="230"/>
-        <CursorPos X="3" Y="232"/>
-        <UsageCount Value="3"/>
-      </Unit91>
-      <Unit92>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\fpg\agtidialogfactory.pas"/>
-        <UnitName Value="agtiDialogFactory"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="140"/>
-        <CursorPos X="51" Y="153"/>
-        <UsageCount Value="3"/>
-      </Unit92>
-      <Unit93>
-        <Filename Value="C:\zz_Laz.git\Packages\ObjectFactory\Units\agobjectfactory.pas"/>
-        <UnitName Value="agObjectFactory"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="264"/>
-        <CursorPos X="3" Y="284"/>
-        <UsageCount Value="3"/>
-      </Unit93>
-      <Unit94>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtireferenceclassescustom.pas"/>
+        <TopLine Value="1758"/>
+        <CursorPos X="3" Y="1770"/>
+        <UsageCount Value="35"/>
+      </Unit55>
+      <Unit56>
+        <Filename Value="..\Laz\Packages\TIOPF\agtiAppHelpers\agtireferenceclassescustom.pas"/>
         <UnitName Value="agtiReferenceClassesCustom"/>
-        <EditorIndex Value="25"/>
-        <TopLine Value="758"/>
-        <CursorPos Y="769"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="109"/>
+        <CursorPos X="17" Y="120"/>
+        <UsageCount Value="7"/>
+      </Unit56>
+      <Unit57>
+        <Filename Value="..\Laz\Packages\TIOPF\Laz_tiMapper\gmapper.pas"/>
+        <UnitName Value="GMapper"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="70"/>
+        <CursorPos X="3" Y="70"/>
+        <UsageCount Value="13"/>
+      </Unit57>
+      <Unit58>
+        <Filename Value="C:\development\Extras\Graemeg-TIOPF_Apps.git\tiOPFMapper\mapper\mapper.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="535"/>
+        <CursorPos Y="536"/>
         <UsageCount Value="10"/>
-        <Loaded Value="True"/>
-      </Unit94>
-      <Unit95>
-        <Filename Value="C:\zz_Laz.git\Packages\ObjectFactory\agobjectfactorypack.pas"/>
-        <UnitName Value="agObjectFactoryPack"/>
+      </Unit58>
+      <Unit59>
+        <Filename Value="..\Laz\Packages\TIOPF\agtiAppHelpers\fpg\agtidefaultdialogfpg.pas"/>
+        <UnitName Value="agtidefaultdialogFPG"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="463"/>
+        <CursorPos X="29" Y="474"/>
+        <UsageCount Value="54"/>
+      </Unit59>
+      <Unit60>
+        <Filename Value="C:\development\Extras\Graemeg-fpGUI-AJg.git\src\gui\fpg_button.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="732"/>
+        <CursorPos Y="743"/>
+        <UsageCount Value="8"/>
+      </Unit60>
+      <Unit61>
+        <Filename Value="..\Laz\Packages\ObjectFactory\agtigendialogfactory.pas"/>
+        <UnitName Value="agtiGenDialogFactory"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="325"/>
+        <CursorPos Y="343"/>
+        <UsageCount Value="9"/>
+      </Unit61>
+      <Unit62>
+        <Filename Value="..\Tests\Show-Modal-Test\OKButtonTest.lpr"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="168"/>
+        <CursorPos X="16" Y="173"/>
+        <UsageCount Value="1"/>
+      </Unit62>
+      <Unit63>
+        <Filename Value="..\Laz\Packages\fpGUI\agfpgDialogs\agfpgBaseDialogEditTiopf.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="73"/>
+        <CursorPos X="3" Y="84"/>
+        <UsageCount Value="23"/>
+      </Unit63>
+      <Unit64>
+        <Filename Value="guimapper.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="104"/>
+      </Unit64>
+      <Unit65>
+        <Filename Value="..\Laz\Packages\TIOPF\~Laz_tiMapper\gmapper.pas"/>
+        <UnitName Value="GMapper"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2031"/>
+        <CursorPos Y="2048"/>
+        <UsageCount Value="103"/>
+      </Unit65>
+      <Unit66>
+        <Filename Value="..\Laz\Packages\TIOPF\agtiAppHelpers\agtiapphelperspack.pas"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+      </Unit66>
+      <Unit67>
+        <Filename Value="..\Laz\Packages\TIOPF\agtiAppHelpers\fpg\agtiguihelperfuncsfpg.pas"/>
+        <UnitName Value="agtiGUIHelperFuncsfpg"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="3" Y="11"/>
-        <UsageCount Value="3"/>
-      </Unit95>
-      <Unit96>
-        <Filename Value="C:\zz_Laz.git\Packages\ObjectFactory\Common\agobjectfactory.pas"/>
+        <UsageCount Value="106"/>
+      </Unit67>
+      <Unit68>
+        <Filename Value="..\Laz\Packages\TIOPF\agtiAppHelpers\agtipropertyguimanager.pas"/>
         <EditorIndex Value="-1"/>
-        <UsageCount Value="3"/>
-      </Unit96>
-      <Unit97>
-        <Filename Value="C:\zz_Laz.git\Packages\ObjectFactory\Common\agtigendialogfactory.pas"/>
-        <UnitName Value="agtiGenDialogFactory"/>
-        <EditorIndex Value="-1"/>
-        <UsageCount Value="3"/>
-      </Unit97>
-      <Unit98>
-        <Filename Value="C:\zz_Laz.git\Packages\ObjectFactory\agobjectfactory.pas"/>
-        <EditorIndex Value="11"/>
-        <TopLine Value="93"/>
-        <CursorPos X="25" Y="105"/>
-        <UsageCount Value="47"/>
-        <Loaded Value="True"/>
-      </Unit98>
-      <Unit99>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\fpg\agtidefaultdialogfpg.pas"/>
-        <UnitName Value="agtidefaultdialogFPG"/>
-        <EditorIndex Value="9"/>
-        <TopLine Value="102"/>
-        <CursorPos X="20" Y="115"/>
-        <UsageCount Value="47"/>
-        <Loaded Value="True"/>
-      </Unit99>
-      <Unit100>
-        <Filename Value="C:\zz_Laz.git\Packages\ObjectFactory\agtigendialogfactory.pas"/>
-        <UnitName Value="agtiGenDialogFactory"/>
-        <EditorIndex Value="12"/>
-        <TopLine Value="71"/>
-        <CursorPos X="17" Y="84"/>
-        <UsageCount Value="47"/>
-        <Loaded Value="True"/>
-      </Unit100>
-      <Unit101>
-        <Filename Value="Forms\backup\~frmfpgmapperguimain.pas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="481"/>
-        <CursorPos Y="494"/>
-        <UsageCount Value="3"/>
-      </Unit101>
-      <Unit102>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\backup\agtiguihelper.pas;16"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="1103"/>
-        <CursorPos X="53" Y="1129"/>
-        <UsageCount Value="6"/>
-        <DefaultSyntaxHighlighter Value="None"/>
-      </Unit102>
-      <Unit103>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiPropertyGUICustom.pas"/>
-        <EditorIndex Value="22"/>
-        <TopLine Value="18"/>
-        <CursorPos X="25" Y="39"/>
-        <UsageCount Value="34"/>
-        <Loaded Value="True"/>
-      </Unit103>
-      <Unit104>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtipropertygui.pas"/>
-        <UnitName Value="agtiPropertyGUI"/>
-        <EditorIndex Value="20"/>
-        <CursorPos X="36" Y="14"/>
-        <UsageCount Value="34"/>
-        <Loaded Value="True"/>
-      </Unit104>
-      <Unit105>
-        <Filename Value="C:\development\Extras\Graemeg-TIOPF_Apps.git\tiOPFMapper\mapper\mapper.pas"/>
-        <EditorIndex Value="18"/>
-        <UsageCount Value="34"/>
-        <Loaded Value="True"/>
-      </Unit105>
-      <Unit106>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\fpg\agtidialogfactoryfpg.pas"/>
-        <UnitName Value="agtiDialogFactoryFPG"/>
-        <EditorIndex Value="10"/>
-        <CursorPos X="35" Y="17"/>
-        <UsageCount Value="11"/>
-        <Loaded Value="True"/>
-      </Unit106>
+        <TopLine Value="467"/>
+        <CursorPos Y="492"/>
+        <UsageCount Value="59"/>
+      </Unit68>
     </Units>
-    <OtherDefines Count="1">
-      <Define0 Value="debug"/>
-    </OtherDefines>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="1">
       <Position1>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="265" Column="22" TopLine="252"/>
+        <Filename Value="..\Laz\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
+        <Caret Line="29" Column="3" TopLine="16"/>
       </Position1>
-      <Position2>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="1462" TopLine="1453"/>
-      </Position2>
-      <Position3>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiModelMediator.pas"/>
-        <Caret Line="1009" TopLine="1003"/>
-      </Position3>
-      <Position4>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="1493" TopLine="1482"/>
-      </Position4>
-      <Position5>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtireferenceclasses.pas"/>
-        <Caret Line="601" TopLine="592"/>
-      </Position5>
-      <Position6>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="1493" TopLine="1489"/>
-      </Position6>
-      <Position7>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="485" TopLine="475"/>
-      </Position7>
-      <Position8>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="1462" TopLine="1452"/>
-      </Position8>
-      <Position9>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="484" TopLine="473"/>
-      </Position9>
-      <Position10>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="422" TopLine="422"/>
-      </Position10>
-      <Position11>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="44" Column="11" TopLine="34"/>
-      </Position11>
-      <Position12>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="48" Column="53" TopLine="34"/>
-      </Position12>
-      <Position13>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="326" Column="12" TopLine="309"/>
-      </Position13>
-      <Position14>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="327" Column="9" TopLine="310"/>
-      </Position14>
-      <Position15>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="381" Column="9" TopLine="364"/>
-      </Position15>
-      <Position16>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="403" Column="9" TopLine="386"/>
-      </Position16>
-      <Position17>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="427" Column="14" TopLine="411"/>
-      </Position17>
-      <Position18>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="460" Column="12" TopLine="444"/>
-      </Position18>
-      <Position19>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="845" Column="14" TopLine="829"/>
-      </Position19>
-      <Position20>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="457" Column="13" TopLine="457"/>
-      </Position20>
-      <Position21>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="427" TopLine="411"/>
-      </Position21>
-      <Position22>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiModelMediator.pas"/>
-        <Caret Line="1009" TopLine="1003"/>
-      </Position22>
-      <Position23>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiModelMediator.pas"/>
-        <Caret Line="1010" TopLine="1003"/>
-      </Position23>
-      <Position24>
-        <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiModelMediator.pas"/>
-        <Caret Line="1016" TopLine="1003"/>
-      </Position24>
-      <Position25>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="429" TopLine="423"/>
-      </Position25>
-      <Position26>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="435" TopLine="423"/>
-      </Position26>
-      <Position27>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="246" TopLine="235"/>
-      </Position27>
-      <Position28>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="436" TopLine="427"/>
-      </Position28>
-      <Position29>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="483" Column="3" TopLine="475"/>
-      </Position29>
-      <Position30>
-        <Filename Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Caret Line="186" Column="14" TopLine="177"/>
-      </Position30>
     </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode="default"/>
+    </RunParams>
   </ProjectSession>
   <Debugging>
-    <BreakPoints Count="3">
-      <Item1>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Line Value="484"/>
-      </Item1>
-      <Item2>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Line Value="485"/>
-      </Item2>
-      <Item3>
-        <Kind Value="bpkSource"/>
-        <WatchScope Value="wpsLocal"/>
-        <WatchKind Value="wpkWrite"/>
-        <Source Value="C:\zz_Laz.git\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
-        <Line Value="427"/>
-      </Item3>
-    </BreakPoints>
     <Watches Count="3">
       <Item1>
         <Expression Value="c"/>

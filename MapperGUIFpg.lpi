@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="10"/>
+    <Version Value="11"/>
     <PathDelim Value="\"/>
     <General>
       <SessionStorage Value="InProjectDir"/>
@@ -25,28 +25,26 @@
       <Version Value="2"/>
     </PublishOptions>
     <RunParams>
-      <local>
-        <FormatVersion Value="1"/>
-      </local>
+      <FormatVersion Value="2"/>
+      <Modes Count="1">
+        <Mode0 Name="default"/>
+      </Modes>
     </RunParams>
-    <RequiredPackages Count="5">
+    <RequiredPackages Count="4">
       <Item1>
-        <PackageName Value="agtiapphelperspack"/>
+        <PackageName Value="agfpgDialogsPack"/>
       </Item1>
       <Item2>
-        <PackageName Value="agtiDialogPackFpg"/>
+        <PackageName Value="agtiapphelperspack"/>
       </Item2>
       <Item3>
-        <PackageName Value="agLaz_tiMapper"/>
+        <PackageName Value="tiOPFfpGUI"/>
       </Item3>
       <Item4>
-        <PackageName Value="tiOPFfpGUI"/>
-      </Item4>
-      <Item5>
         <PackageName Value="laz_timapper"/>
-      </Item5>
+      </Item4>
     </RequiredPackages>
-    <Units Count="12">
+    <Units Count="11">
       <Unit0>
         <Filename Value="MapperGUIFpg.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -85,24 +83,20 @@
         <UnitName Value="frmfpgmgclassDlg"/>
       </Unit7>
       <Unit8>
-        <Filename Value="Forms\frmfpgMGDefaultDialog.pas"/>
-        <IsPartOfProject Value="True"/>
-      </Unit8>
-      <Unit9>
         <Filename Value="Forms\frmfpgmgenumdlg.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="frmfpgMGEnumDlg"/>
-      </Unit9>
-      <Unit10>
+      </Unit8>
+      <Unit9>
         <Filename Value="Forms\frmfpgmgincludesdlg.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="frmfpgMGIncludesDlg"/>
-      </Unit10>
-      <Unit11>
+      </Unit9>
+      <Unit10>
         <Filename Value="umgregisterdialogs.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="uMGRegisterDialogs"/>
-      </Unit11>
+      </Unit10>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
@@ -120,9 +114,6 @@
     </Linking>
     <Other>
       <CustomOptions Value="-ddebug"/>
-      <OtherDefines Count="1">
-        <Define0 Value="debug"/>
-      </OtherDefines>
     </Other>
   </CompilerOptions>
   <Debugging>
