@@ -16817,3 +16817,347 @@ Call trace for block $034D0338 size 92
   $0046AB73  TFPGWIDGET__MSGMOUSEUP,  line 924 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_widget.pas
   $0040D588
   $004387C4  TFPGWINDOWBASE__DEFAULTHANDLER,  line 2127 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_base.pas
+<<<<<<< HEAD
+=======
+C:\Git\fpgMapperGUI\Forms\Tests\agDialogsTest.exe 
+Heap dump by heaptrc unit
+6924 memory blocks allocated : 6521521/6539128
+6887 memory blocks freed     : 6520385/6537864
+37 unfreed memory blocks : 1136
+True heap size : 557056 (112 used in System startup)
+True free heap : 552928
+Should be : 553312
+Call trace for block $01CCA130 size 16
+  $0044A104  TAGFPGBASEDIALOGEDITTIOPF__SETDATAONCE,  line 697 of agfpgBaseDialogEditTiopf.pas
+  $00449FC3  TAGFPGBASEDIALOGEDITTIOPF__EDIT,  line 256 of agfpgBaseDialogEditTiopf.pas
+  $00402AA6  TMAINFORM__BTNCLASSDLGCLICK,  line 287 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $00466573  TFPGWIDGET__MSGMOUSEUP,  line 924 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_widget.pas
+  $0040D4F8
+Call trace for block $01CCA0D0 size 24
+  $0049C9CB  TPEROBJCLASSMAPPING__CREATE,  line 3150 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049BDA0  TPEROBJFACTORY__REGISTERCLASS,  line 2596 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044A104  TAGFPGBASEDIALOGEDITTIOPF__SETDATAONCE,  line 697 of agfpgBaseDialogEditTiopf.pas
+  $00449FC3  TAGFPGBASEDIALOGEDITTIOPF__EDIT,  line 256 of agfpgBaseDialogEditTiopf.pas
+  $00402AA6  TMAINFORM__BTNCLASSDLGCLICK,  line 287 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $01CCA070 size 22
+  $00449FC3  TAGFPGBASEDIALOGEDITTIOPF__EDIT,  line 256 of agfpgBaseDialogEditTiopf.pas
+  $00402AA6  TMAINFORM__BTNCLASSDLGCLICK,  line 287 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $00466573  TFPGWIDGET__MSGMOUSEUP,  line 924 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_widget.pas
+  $0040D4F8
+  $004381E4  TFPGWINDOWBASE__DEFAULTHANDLER,  line 2127 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_base.pas
+Call trace for block $01CC9770 size 16
+  $0041A0FE
+  $0045D12F line 1278 of fpg_impl.pas
+  $0049B93E  TPEROBJFACTORY__CREATE,  line 2533 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044A0B1  TAGFPGBASEDIALOGEDITTIOPF__SETDATAONCE,  line 697 of agfpgBaseDialogEditTiopf.pas
+  $00449FC3  TAGFPGBASEDIALOGEDITTIOPF__EDIT,  line 256 of agfpgBaseDialogEditTiopf.pas
+  $00402AA6  TMAINFORM__BTNCLASSDLGCLICK,  line 287 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $01CC9E30 size 20
+  $0049B93E  TPEROBJFACTORY__CREATE,  line 2533 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044A0B1  TAGFPGBASEDIALOGEDITTIOPF__SETDATAONCE,  line 697 of agfpgBaseDialogEditTiopf.pas
+  $00449FC3  TAGFPGBASEDIALOGEDITTIOPF__EDIT,  line 256 of agfpgBaseDialogEditTiopf.pas
+  $00402AA6  TMAINFORM__BTNCLASSDLGCLICK,  line 287 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $00466573  TFPGWIDGET__MSGMOUSEUP,  line 924 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_widget.pas
+Call trace for block $01CC9F50 size 20
+  $0049B8FB  TPEROBJFACTORY__CREATE,  line 2531 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044A0B1  TAGFPGBASEDIALOGEDITTIOPF__SETDATAONCE,  line 697 of agfpgBaseDialogEditTiopf.pas
+  $00449FC3  TAGFPGBASEDIALOGEDITTIOPF__EDIT,  line 256 of agfpgBaseDialogEditTiopf.pas
+  $00402AA6  TMAINFORM__BTNCLASSDLGCLICK,  line 287 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $00466573  TFPGWIDGET__MSGMOUSEUP,  line 924 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_widget.pas
+Call trace for block $00207590 size 16
+  $0041A0FE
+  $0045D12F line 1278 of fpg_impl.pas
+  $00499A0E  TTIOBJECTLIST__CREATE,  line 1415 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044E354  TTIMAPPEDFILTEREDOBJECTLIST__CREATE,  line 2127 of C:/development/Extras/Graemeg-TIOPF_Apps.git/tiOPFMapper/mapper/mapper.pas
+  $0050876B  TAGTIMEDIATORMAPLIST__CREATE,  line 1206 of C:/Git/Laz/Packages/TIOPF/agtiAppHelpers/agtireferenceclasses.pas
+  $004FF307  TAGTIGUIHELPERCUSTOM__CREATE,  line 1278 of C:/Git/Laz/Packages/TIOPF/agtiAppHelpers/agtiguihelper.pas
+  $00449B0F  TAGFPGBASEDIALOGEDITTIOPF__CREATE,  line 137 of agfpgBaseDialogEditTiopf.pas
+  $0044B668  GENOWNEDCLASSMAPPING$2$CRCF94B8C22__CREATEINSTANCE,  line 570 of C:/Git/Laz/Packages/ObjectFactory/agobjectfactory.pas
+Call trace for block $00207530 size 20
+  $00499A0E  TTIOBJECTLIST__CREATE,  line 1415 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044E354  TTIMAPPEDFILTEREDOBJECTLIST__CREATE,  line 2127 of C:/development/Extras/Graemeg-TIOPF_Apps.git/tiOPFMapper/mapper/mapper.pas
+  $0050876B  TAGTIMEDIATORMAPLIST__CREATE,  line 1206 of C:/Git/Laz/Packages/TIOPF/agtiAppHelpers/agtireferenceclasses.pas
+  $004FF307  TAGTIGUIHELPERCUSTOM__CREATE,  line 1278 of C:/Git/Laz/Packages/TIOPF/agtiAppHelpers/agtiguihelper.pas
+  $00449B0F  TAGFPGBASEDIALOGEDITTIOPF__CREATE,  line 137 of agfpgBaseDialogEditTiopf.pas
+  $0044B668  GENOWNEDCLASSMAPPING$2$CRCF94B8C22__CREATEINSTANCE,  line 570 of C:/Git/Laz/Packages/ObjectFactory/agobjectfactory.pas
+  $0044AFDD  GENOWNEDCLASSFACTORY$2$CRCF94B8C22__CREATENEWINSTANCECLASS,  line 418 of C:/Git/Laz/Packages/ObjectFactory/agobjectfactory.pas
+  $0044A931  GENAGTIDIALOGS$2$CRCF94B8C22__CREATEDIALOGCLASSNAME,  line 697 of C:/Git/Laz/Packages/ObjectFactory/agtigendialogfactory.pas
+Call trace for block $01CB1488 size 52
+  $004999CB  TTIOBJECTLIST__CREATE,  line 1413 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044E354  TTIMAPPEDFILTEREDOBJECTLIST__CREATE,  line 2127 of C:/development/Extras/Graemeg-TIOPF_Apps.git/tiOPFMapper/mapper/mapper.pas
+  $0050876B  TAGTIMEDIATORMAPLIST__CREATE,  line 1206 of C:/Git/Laz/Packages/TIOPF/agtiAppHelpers/agtireferenceclasses.pas
+  $004FF307  TAGTIGUIHELPERCUSTOM__CREATE,  line 1278 of C:/Git/Laz/Packages/TIOPF/agtiAppHelpers/agtiguihelper.pas
+  $00449B0F  TAGFPGBASEDIALOGEDITTIOPF__CREATE,  line 137 of agfpgBaseDialogEditTiopf.pas
+  $0044B668  GENOWNEDCLASSMAPPING$2$CRCF94B8C22__CREATEINSTANCE,  line 570 of C:/Git/Laz/Packages/ObjectFactory/agobjectfactory.pas
+  $0044AFDD  GENOWNEDCLASSFACTORY$2$CRCF94B8C22__CREATENEWINSTANCECLASS,  line 418 of C:/Git/Laz/Packages/ObjectFactory/agobjectfactory.pas
+  $0044A931  GENAGTIDIALOGS$2$CRCF94B8C22__CREATEDIALOGCLASSNAME,  line 697 of C:/Git/Laz/Packages/ObjectFactory/agtigendialogfactory.pas
+Call trace for block $00207650 size 16
+  $0041A0FE
+  $0045D12F line 1278 of fpg_impl.pas
+  $00499A0E  TTIOBJECTLIST__CREATE,  line 1415 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0050B4CF  TTIFILTEREDOBJECTLIST__CREATE,  line 58 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiFilteredObjectList.pas
+  $0044E33F  TTIMAPPEDFILTEREDOBJECTLIST__CREATE,  line 2128 of C:/development/Extras/Graemeg-TIOPF_Apps.git/tiOPFMapper/mapper/mapper.pas
+  $0050876B  TAGTIMEDIATORMAPLIST__CREATE,  line 1206 of C:/Git/Laz/Packages/TIOPF/agtiAppHelpers/agtireferenceclasses.pas
+  $004FF307  TAGTIGUIHELPERCUSTOM__CREATE,  line 1278 of C:/Git/Laz/Packages/TIOPF/agtiAppHelpers/agtiguihelper.pas
+  $00449B0F  TAGFPGBASEDIALOGEDITTIOPF__CREATE,  line 137 of agfpgBaseDialogEditTiopf.pas
+Call trace for block $00207410 size 20
+  $00499A0E  TTIOBJECTLIST__CREATE,  line 1415 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0050B4CF  TTIFILTEREDOBJECTLIST__CREATE,  line 58 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiFilteredObjectList.pas
+  $0044E33F  TTIMAPPEDFILTEREDOBJECTLIST__CREATE,  line 2128 of C:/development/Extras/Graemeg-TIOPF_Apps.git/tiOPFMapper/mapper/mapper.pas
+  $0050876B  TAGTIMEDIATORMAPLIST__CREATE,  line 1206 of C:/Git/Laz/Packages/TIOPF/agtiAppHelpers/agtireferenceclasses.pas
+  $004FF307  TAGTIGUIHELPERCUSTOM__CREATE,  line 1278 of C:/Git/Laz/Packages/TIOPF/agtiAppHelpers/agtiguihelper.pas
+  $00449B0F  TAGFPGBASEDIALOGEDITTIOPF__CREATE,  line 137 of agfpgBaseDialogEditTiopf.pas
+  $0044B668  GENOWNEDCLASSMAPPING$2$CRCF94B8C22__CREATEINSTANCE,  line 570 of C:/Git/Laz/Packages/ObjectFactory/agobjectfactory.pas
+  $0044AFDD  GENOWNEDCLASSFACTORY$2$CRCF94B8C22__CREATENEWINSTANCECLASS,  line 418 of C:/Git/Laz/Packages/ObjectFactory/agobjectfactory.pas
+Call trace for block $002073B0 size 20
+  $004A1DDB  TTIOID__CREATE,  line 135 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiOID.pas
+  $0049AEF5  TTIOBJECT__GETOID,  line 2111 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049DE51  TVISTIOBJECTASDEBUGSTRING__EXECUTE,  line 3824 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049F91E  TTIVISITED__EXECUTEVISITOR,  line 447 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiVisitor.pas
+  $0049FF4E  TTIVISITED__TOUCHMETHODEXECUTEVISITOR,  line 574 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiVisitor.pas
+  $0049F5BF  TTIVISITED__ITERATERECURSE,  line 397 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiVisitor.pas
+  $0049FC29  TTIVISITED__ITERATETOPDOWNRECURSE,  line 510 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiVisitor.pas
+  $004A07A2  TTIVISITED__ITERATEASSIGNTOUCHED,  line 794 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiVisitor.pas
+Call trace for block $0020AB58 size 25
+  $00402A44  TMAINFORM__BTNCLASSDLGCLICK,  line 283 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $00466573  TFPGWIDGET__MSGMOUSEUP,  line 924 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_widget.pas
+  $0040D4F8
+  $004381E4  TFPGWINDOWBASE__DEFAULTHANDLER,  line 2127 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_base.pas
+  $0040D526
+Call trace for block $01CB1308 size 49
+  $004BA33F  TTIOIDGENERATORGUID__ASSIGNNEXTOID,  line 1278 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiOIDGUID.pas
+  $0049AFC3  TTIOBJECT__CREATENEW,  line 2125 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ED23  TGMAPCLASSDEF__CREATE,  line 1966 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $002015F0 size 20
+  $004A1DDB  TTIOID__CREATE,  line 135 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiOID.pas
+  $0049AEF5  TTIOBJECT__GETOID,  line 2111 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049AFB7  TTIOBJECT__CREATENEW,  line 2125 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ED23  TGMAPCLASSDEF__CREATE,  line 1966 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $00207230 size 16
+  $0041A0FE
+  $0045D12F line 1278 of fpg_impl.pas
+  $00499A0E  TTIOBJECTLIST__CREATE,  line 1415 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049AF6F  TTIOBJECT__CREATENEW,  line 2127 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ED23  TGMAPCLASSDEF__CREATE,  line 1966 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $00200CF0 size 20
+  $00499A0E  TTIOBJECTLIST__CREATE,  line 1415 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049AF6F  TTIOBJECT__CREATENEW,  line 2127 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ED23  TGMAPCLASSDEF__CREATE,  line 1966 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $01CB1188 size 52
+  $0049B060  TTIOBJECT__CREATENEW,  line 2130 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ED23  TGMAPCLASSDEF__CREATE,  line 1966 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $00466573  TFPGWIDGET__MSGMOUSEUP,  line 924 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_widget.pas
+  $0040D4F8
+Call trace for block $01CB1208 size 49
+  $004BA33F  TTIOIDGENERATORGUID__ASSIGNNEXTOID,  line 1278 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiOIDGUID.pas
+  $0049AFC3  TTIOBJECT__CREATENEW,  line 2125 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ED01  TGMAPCLASSDEF__CREATE,  line 1965 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $00201A70 size 20
+  $004A1DDB  TTIOID__CREATE,  line 135 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiOID.pas
+  $0049AEF5  TTIOBJECT__GETOID,  line 2111 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049AFB7  TTIOBJECT__CREATENEW,  line 2125 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ED01  TGMAPCLASSDEF__CREATE,  line 1965 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $002017D0 size 16
+  $0041A0FE
+  $0045D12F line 1278 of fpg_impl.pas
+  $00499A0E  TTIOBJECTLIST__CREATE,  line 1415 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049AF6F  TTIOBJECT__CREATENEW,  line 2127 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ED01  TGMAPCLASSDEF__CREATE,  line 1965 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $00200F30 size 20
+  $00499A0E  TTIOBJECTLIST__CREATE,  line 1415 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049AF6F  TTIOBJECT__CREATENEW,  line 2127 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ED01  TGMAPCLASSDEF__CREATE,  line 1965 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $00228BE0 size 52
+  $0049B060  TTIOBJECT__CREATENEW,  line 2130 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ED01  TGMAPCLASSDEF__CREATE,  line 1965 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $00466573  TFPGWIDGET__MSGMOUSEUP,  line 924 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_widget.pas
+  $0040D4F8
+Call trace for block $00228CE0 size 49
+  $004BA33F  TTIOIDGENERATORGUID__ASSIGNNEXTOID,  line 1278 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiOIDGUID.pas
+  $0049AFC3  TTIOBJECT__CREATENEW,  line 2125 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ECDF  TGMAPCLASSDEF__CREATE,  line 1964 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $002018F0 size 20
+  $004A1DDB  TTIOID__CREATE,  line 135 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiOID.pas
+  $0049AEF5  TTIOBJECT__GETOID,  line 2111 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049AFB7  TTIOBJECT__CREATENEW,  line 2125 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ECDF  TGMAPCLASSDEF__CREATE,  line 1964 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $00228C60 size 49
+  $004BA33F  TTIOIDGENERATORGUID__ASSIGNNEXTOID,  line 1278 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiOIDGUID.pas
+  $0049AFC3  TTIOBJECT__CREATENEW,  line 2125 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044F345  TGCLASSMAPPING__CREATE,  line 2231 of C:/Git/fpgMapperGUI/guimapper.pas
+  $0049AF6F  TTIOBJECT__CREATENEW,  line 2127 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ECDF  TGMAPCLASSDEF__CREATE,  line 1964 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+Call trace for block $00200FF0 size 20
+  $004A1DDB  TTIOID__CREATE,  line 135 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiOID.pas
+  $0049AEF5  TTIOBJECT__GETOID,  line 2111 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049AFB7  TTIOBJECT__CREATENEW,  line 2125 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044F345  TGCLASSMAPPING__CREATE,  line 2231 of C:/Git/fpgMapperGUI/guimapper.pas
+  $0049AF6F  TTIOBJECT__CREATENEW,  line 2127 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ECDF  TGMAPCLASSDEF__CREATE,  line 1964 of C:/Git/fpgMapperGUI/guimapper.pas
+Call trace for block $00201170 size 16
+  $0041A0FE
+  $0045D12F line 1278 of fpg_impl.pas
+  $00499A0E  TTIOBJECTLIST__CREATE,  line 1415 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049AF6F  TTIOBJECT__CREATENEW,  line 2127 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044F345  TGCLASSMAPPING__CREATE,  line 2231 of C:/Git/fpgMapperGUI/guimapper.pas
+  $0049AF6F  TTIOBJECT__CREATENEW,  line 2127 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+Call trace for block $00201830 size 20
+  $00499A0E  TTIOBJECTLIST__CREATE,  line 1415 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049AF6F  TTIOBJECT__CREATENEW,  line 2127 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044F345  TGCLASSMAPPING__CREATE,  line 2231 of C:/Git/fpgMapperGUI/guimapper.pas
+  $0049AF6F  TTIOBJECT__CREATENEW,  line 2127 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ECDF  TGMAPCLASSDEF__CREATE,  line 1964 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+Call trace for block $00228A60 size 52
+  $0049B060  TTIOBJECT__CREATENEW,  line 2130 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044F345  TGCLASSMAPPING__CREATE,  line 2231 of C:/Git/fpgMapperGUI/guimapper.pas
+  $0049AF6F  TTIOBJECT__CREATENEW,  line 2127 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ECDF  TGMAPCLASSDEF__CREATE,  line 1964 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $01C71BD8 size 60
+  $0049B060  TTIOBJECT__CREATENEW,  line 2130 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ECDF  TGMAPCLASSDEF__CREATE,  line 1964 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $00466573  TFPGWIDGET__MSGMOUSEUP,  line 924 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_widget.pas
+  $0040D4F8
+Call trace for block $00228B60 size 49
+  $004BA33F  TTIOIDGENERATORGUID__ASSIGNNEXTOID,  line 1278 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiOIDGUID.pas
+  $0049AFC3  TTIOBJECT__CREATENEW,  line 2125 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ECBD  TGMAPCLASSDEF__CREATE,  line 1963 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $00200DB0 size 20
+  $004A1DDB  TTIOID__CREATE,  line 135 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiOID.pas
+  $0049AEF5  TTIOBJECT__GETOID,  line 2111 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049AFB7  TTIOBJECT__CREATENEW,  line 2125 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ECBD  TGMAPCLASSDEF__CREATE,  line 1963 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $00201710 size 16
+  $0041A0FE
+  $0045D12F line 1278 of fpg_impl.pas
+  $00499A0E  TTIOBJECTLIST__CREATE,  line 1415 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049AF6F  TTIOBJECT__CREATENEW,  line 2127 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ECBD  TGMAPCLASSDEF__CREATE,  line 1963 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $00201890 size 20
+  $00499A0E  TTIOBJECTLIST__CREATE,  line 1415 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049AF6F  TTIOBJECT__CREATENEW,  line 2127 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0049B0A5  TTIOBJECT__CREATENEW,  line 2132 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ECBD  TGMAPCLASSDEF__CREATE,  line 1963 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+Call trace for block $00228AE0 size 52
+  $0049B060  TTIOBJECT__CREATENEW,  line 2130 of C:/development/Extras/Graemeg-tiOPF.git/Core/tiObject.pas
+  $0044ECBD  TGMAPCLASSDEF__CREATE,  line 1963 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $00466573  TFPGWIDGET__MSGMOUSEUP,  line 924 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_widget.pas
+  $0040D4F8
+Call trace for block $01C901E8 size 92
+  $0044EC5C  TGMAPCLASSDEF__CREATE,  line 1959 of C:/Git/fpgMapperGUI/guimapper.pas
+  $00402A00  TMAINFORM__BTNCLASSDLGCLICK,  line 280 of agDialogsTest.lpr
+  $0045146E  TFPGBASEBUTTON__CLICK,  line 805 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045106A  TFPGBASEBUTTON__DORELEASE,  line 688 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $0045123C  TFPGBASEBUTTON__HANDLELMOUSEUP,  line 742 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/gui/fpg_button.pas
+  $00466573  TFPGWIDGET__MSGMOUSEUP,  line 924 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_widget.pas
+  $0040D4F8
+  $004381E4  TFPGWINDOWBASE__DEFAULTHANDLER,  line 2127 of C:/development/Extras/Graemeg-fpGUI-AJg.git/src/corelib/fpg_base.pas
+>>>>>>> 41d70ac7d0b3abb99d0679d3735dc606e7404daf

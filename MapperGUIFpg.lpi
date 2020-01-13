@@ -32,10 +32,17 @@
     </RunParams>
     <RequiredPackages Count="4">
       <Item1>
+<<<<<<< HEAD
         <PackageName Value="agfpgDialogsPack"/>
       </Item1>
       <Item2>
         <PackageName Value="agtiapphelperspack"/>
+=======
+        <PackageName Value="agtiGUIhelperFpgPack"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="agfpgDialogsPack"/>
+>>>>>>> 41d70ac7d0b3abb99d0679d3735dc606e7404daf
       </Item2>
       <Item3>
         <PackageName Value="tiOPFfpGUI"/>

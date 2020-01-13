@@ -4,7 +4,11 @@
     <PathDelim Value="\"/>
     <Version Value="11"/>
     <BuildModes Active="Default"/>
+<<<<<<< HEAD
     <Units Count="15">
+=======
+    <Units Count="16">
+>>>>>>> 41d70ac7d0b3abb99d0679d3735dc606e7404daf
       <Unit0>
         <Filename Value="agDialogsTest.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -26,16 +30,26 @@
         <Filename Value="..\frmfpgmgclassdlg.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="frmfpgmgclassDlg"/>
+<<<<<<< HEAD
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="114"/>
         <CursorPos X="15" Y="708"/>
+=======
+        <EditorIndex Value="1"/>
+        <TopLine Value="113"/>
+        <CursorPos Y="698"/>
+>>>>>>> 41d70ac7d0b3abb99d0679d3735dc606e7404daf
         <UsageCount Value="210"/>
         <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="C:\development\Extras\Graemeg-TIOPF_Apps.git\tiOPFMapper\mapper\mapper.pas"/>
+<<<<<<< HEAD
         <EditorIndex Value="4"/>
+=======
+        <EditorIndex Value="7"/>
+>>>>>>> 41d70ac7d0b3abb99d0679d3735dc606e7404daf
         <TopLine Value="551"/>
         <CursorPos X="3" Y="572"/>
         <UsageCount Value="101"/>
@@ -46,10 +60,18 @@
       </Unit3>
       <Unit4>
         <Filename Value="..\..\..\Laz\Packages\fpGUI\agfpgDialogs\agfpgBaseDialogEditTiopf.pas"/>
+<<<<<<< HEAD
         <EditorIndex Value="-1"/>
         <TopLine Value="242"/>
         <CursorPos X="72" Y="254"/>
         <UsageCount Value="225"/>
+=======
+        <EditorIndex Value="4"/>
+        <TopLine Value="242"/>
+        <CursorPos X="72" Y="254"/>
+        <UsageCount Value="225"/>
+        <Loaded Value="True"/>
+>>>>>>> 41d70ac7d0b3abb99d0679d3735dc606e7404daf
       </Unit4>
       <Unit5>
         <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiObject.pas"/>
@@ -64,7 +86,11 @@
       <Unit6>
         <Filename Value="..\..\..\Laz\Packages\TIOPF\~Laz_tiMapper\gmapper.pas"/>
         <UnitName Value="GMapper"/>
+<<<<<<< HEAD
         <EditorIndex Value="5"/>
+=======
+        <EditorIndex Value="8"/>
+>>>>>>> 41d70ac7d0b3abb99d0679d3735dc606e7404daf
         <TopLine Value="1858"/>
         <CursorPos X="25" Y="1861"/>
         <UsageCount Value="104"/>
@@ -95,10 +121,18 @@
         <UsageCount Value="200"/>
       </Unit9>
       <Unit10>
+<<<<<<< HEAD
         <Filename Value="..\..\..\Laz\Packages\TIOPF\agtiAppHelpers\agtiguihelper.pas"/>
         <EditorIndex Value="2"/>
         <TopLine Value="817"/>
         <CursorPos X="3" Y="817"/>
+=======
+        <Filename Value="..\..\..\Laz\Packages\TIOPF\agtiAppHelpers\agtiguihelperbase.pas"/>
+        <UnitName Value="agtiguihelperBase"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="244"/>
+        <CursorPos Y="247"/>
+>>>>>>> 41d70ac7d0b3abb99d0679d3735dc606e7404daf
         <UsageCount Value="181"/>
         <Loaded Value="True"/>
       </Unit10>
@@ -114,6 +148,7 @@
       </Unit11>
       <Unit12>
         <Filename Value="C:\development\Extras\Graemeg-tiOPF.git\Core\tiBaseMediator.pas"/>
+<<<<<<< HEAD
         <EditorIndex Value="-1"/>
         <TopLine Value="402"/>
         <CursorPos Y="412"/>
@@ -122,6 +157,18 @@
       <Unit13>
         <Filename Value="..\..\guimapper.pas"/>
         <EditorIndex Value="3"/>
+=======
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="402"/>
+        <CursorPos X="30" Y="405"/>
+        <UsageCount Value="38"/>
+        <Loaded Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="..\..\guimapper.pas"/>
+        <EditorIndex Value="6"/>
+>>>>>>> 41d70ac7d0b3abb99d0679d3735dc606e7404daf
         <TopLine Value="384"/>
         <CursorPos Y="384"/>
         <UsageCount Value="65"/>
@@ -134,13 +181,27 @@
         <CursorPos X="3" Y="48"/>
         <UsageCount Value="6"/>
       </Unit14>
+<<<<<<< HEAD
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
+=======
+      <Unit15>
+        <Filename Value="..\..\..\Laz\Packages\TIOPF\agtiAppHelpers\fpg\agtiguihelperfuncsfpg.pas"/>
+        <UnitName Value="agtiGUIHelperFuncsfpg"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="48" Y="6"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit15>
+    </Units>
+    <JumpHistory Count="28" HistoryIndex="27">
+>>>>>>> 41d70ac7d0b3abb99d0679d3735dc606e7404daf
       <Position1>
         <Filename Value="..\..\guimapper.pas"/>
         <Caret Line="647" Column="3" TopLine="636"/>
       </Position1>
       <Position2>
+<<<<<<< HEAD
         <Filename Value="..\..\guimapper.pas"/>
         <Caret Line="623" Column="3" TopLine="623"/>
       </Position2>
@@ -167,6 +228,34 @@
       <Position8>
         <Filename Value="..\..\guimapper.pas"/>
         <Caret Line="647" Column="3" TopLine="636"/>
+=======
+        <Filename Value="..\frmfpgmgclassdlg.pas"/>
+        <Caret Line="764" Column="19" TopLine="749"/>
+      </Position2>
+      <Position3>
+        <Filename Value="..\..\guimapper.pas"/>
+        <Caret Line="707" Column="17" TopLine="698"/>
+      </Position3>
+      <Position4>
+        <Filename Value="..\..\guimapper.pas"/>
+        <Caret Line="647" Column="3" TopLine="636"/>
+      </Position4>
+      <Position5>
+        <Filename Value="..\frmfpgmgclassdlg.pas"/>
+        <Caret Line="764" Column="19" TopLine="749"/>
+      </Position5>
+      <Position6>
+        <Filename Value="..\..\guimapper.pas"/>
+        <Caret Line="707" Column="17" TopLine="698"/>
+      </Position6>
+      <Position7>
+        <Filename Value="..\..\guimapper.pas"/>
+        <Caret Line="557" Column="3" TopLine="546"/>
+      </Position7>
+      <Position8>
+        <Filename Value="..\..\guimapper.pas"/>
+        <Caret Line="511" Column="3" TopLine="500"/>
+>>>>>>> 41d70ac7d0b3abb99d0679d3735dc606e7404daf
       </Position8>
       <Position9>
         <Filename Value="..\frmfpgmgclassdlg.pas"/>
@@ -181,6 +270,7 @@
         <Caret Line="557" Column="3" TopLine="546"/>
       </Position11>
       <Position12>
+<<<<<<< HEAD
         <Filename Value="..\..\guimapper.pas"/>
         <Caret Line="529" Column="3" TopLine="536"/>
       </Position12>
@@ -255,6 +345,74 @@
         <Filename Value="..\frmfpgmgclassdlg.pas"/>
         <Caret Line="753" Column="2" TopLine="745"/>
       </Position30>
+=======
+        <Filename Value="C:\development\Extras\Graemeg-TIOPF_Apps.git\tiOPFMapper\mapper\mapper.pas"/>
+        <Caret Line="76" Column="3" TopLine="61"/>
+      </Position12>
+      <Position13>
+        <Filename Value="C:\development\Extras\Graemeg-TIOPF_Apps.git\tiOPFMapper\mapper\mapper.pas"/>
+        <Caret Line="314" Column="15" TopLine="298"/>
+      </Position13>
+      <Position14>
+        <Filename Value="C:\development\Extras\Graemeg-TIOPF_Apps.git\tiOPFMapper\mapper\mapper.pas"/>
+      </Position14>
+      <Position15>
+        <Filename Value="C:\development\Extras\Graemeg-TIOPF_Apps.git\tiOPFMapper\mapper\mapper.pas"/>
+        <Caret Line="37" Column="16" TopLine="19"/>
+      </Position15>
+      <Position16>
+        <Filename Value="C:\development\Extras\Graemeg-TIOPF_Apps.git\tiOPFMapper\mapper\mapper.pas"/>
+        <Caret Line="373" Column="3" TopLine="352"/>
+      </Position16>
+      <Position17>
+        <Filename Value="C:\development\Extras\Graemeg-TIOPF_Apps.git\tiOPFMapper\mapper\mapper.pas"/>
+        <Caret Line="31" Column="14" TopLine="20"/>
+      </Position17>
+      <Position18>
+        <Filename Value="..\frmfpgmgclassdlg.pas"/>
+        <Caret Line="764" Column="19" TopLine="745"/>
+      </Position18>
+      <Position19>
+        <Filename Value="..\..\guimapper.pas"/>
+        <Caret Line="467" Column="17" TopLine="456"/>
+      </Position19>
+      <Position20>
+        <Filename Value="..\..\guimapper.pas"/>
+        <Caret Line="425" Column="3" TopLine="412"/>
+      </Position20>
+      <Position21>
+        <Filename Value="..\frmfpgmgclassdlg.pas"/>
+        <Caret Line="764" Column="19" TopLine="745"/>
+      </Position21>
+      <Position22>
+        <Filename Value="..\frmfpgmgclassdlg.pas"/>
+        <Caret Line="753" Column="2" TopLine="745"/>
+      </Position22>
+      <Position23>
+        <Filename Value="..\..\..\Laz\Packages\TIOPF\agtiAppHelpers\agtiguihelperbase.pas"/>
+        <Caret Line="696" TopLine="696"/>
+      </Position23>
+      <Position24>
+        <Filename Value="..\..\..\Laz\Packages\TIOPF\agtiAppHelpers\agtiguihelperbase.pas"/>
+        <Caret Line="29" Column="21" TopLine="16"/>
+      </Position24>
+      <Position25>
+        <Filename Value="..\..\..\Laz\Packages\TIOPF\agtiAppHelpers\agtiguihelperbase.pas"/>
+        <Caret Line="28" Column="17" TopLine="11"/>
+      </Position25>
+      <Position26>
+        <Filename Value="..\..\..\Laz\Packages\TIOPF\agtiAppHelpers\agtiguihelperbase.pas"/>
+        <Caret Line="256" Column="3" TopLine="243"/>
+      </Position26>
+      <Position27>
+        <Filename Value="..\..\..\Laz\Packages\TIOPF\agtiAppHelpers\agtiguihelperbase.pas"/>
+        <Caret Line="28" Column="3" TopLine="15"/>
+      </Position27>
+      <Position28>
+        <Filename Value="..\..\..\Laz\Packages\TIOPF\agtiAppHelpers\agtiguihelperbase.pas"/>
+        <Caret Line="247" TopLine="244"/>
+      </Position28>
+>>>>>>> 41d70ac7d0b3abb99d0679d3735dc606e7404daf
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
